@@ -1,0 +1,19 @@
+- @active_tab = :press
+- title 'Press'
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th Url
+  - @press_stories.each do |press_story|
+    %tr
+      %td= h press_story.title
+      %td= h press_story.description
+      %td= h press_story.url
+      %td= link_to 'Show', press_story
+      %td= link_to 'Edit', edit_press_story_path(press_story)
+      %td= link_to 'Delete', press_story, :confirm => "Are you sure you want to delete #{press_story.title}?", :method => :delete
+
+%br/
+= link_to 'New', new_press_story_path

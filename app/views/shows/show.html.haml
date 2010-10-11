@@ -1,0 +1,17 @@
+- @active_tab = :shows
+- title "#{h @show.title}"
+
+%p
+  %b Description:
+  = h @show.description
+
+%p
+  %b Date:
+  = h @show.date
+
+%p
+  %b Time:
+  = h @show.time
+= link_to 'Edit', edit_show_path(@show)
+|
+= link_to 'Go Back to All Shows', shows_path

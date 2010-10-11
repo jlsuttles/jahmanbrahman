@@ -1,0 +1,25 @@
+- @active_tab = :photos
+- title "Edit Photo #{h @band_photo.title}"
+  
+- form_for(@band_photo, :html => {:multipart => true}) do |f|
+  
+  = f.error_messages
+  
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  
+  %p
+    = f.label :file
+    = f.file_field :file
+  
+  %p
+    = f.submit 'Save Changes'
+    or
+    =link_to 'Cancel and Go Back', band_photos_path

@@ -1,0 +1,10 @@
+- @active_tab = :press
+- title "#{h @press_story.title}"
+
+%p= h @press_story.description
+
+%p= h @press_story.url
+
+= link_to 'Edit', edit_press_story_path(@press_story)
+|
+= link_to 'Go Back to All Press Stories', press_stories_path

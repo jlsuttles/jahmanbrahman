@@ -1,0 +1,2 @@
+module PressStoriesHelper
+end

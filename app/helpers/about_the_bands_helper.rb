@@ -1,0 +1,2 @@
+module AboutTheBandsHelper
+end

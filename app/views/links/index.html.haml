@@ -1,0 +1,19 @@
+- @active_tab = :links
+- title 'Links'
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th Url
+  - @links.each do |link|
+    %tr
+      %td= h link.title
+      %td= h link.description
+      %td= h link.url
+      %td= link_to 'Show', link
+      %td= link_to 'Edit', edit_link_path(link)
+      %td= link_to 'Delete', link, :confirm => "Are you sure you want to delete the link to #{link.title}?", :method => :delete
+
+%br/
+= link_to 'New', new_link_path

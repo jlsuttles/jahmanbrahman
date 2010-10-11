@@ -1,0 +1,21 @@
+- @active_tab = :contact
+- title 'New Contact'
+
+- form_for(@contact_information) do |f|
+
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+
+  %p
+    = f.submit 'Create'
+    or
+    = link_to 'Cancel and Go Back', contact_informations_path

@@ -1,0 +1,126 @@
+body { 
+	background-color: #000; 
+	color: #fff; }
+
+body, p, ol, ul, td {
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-size:   16px;
+  line-height: 24px;
+}
+
+pre {
+  background-color: #00F;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #666; }
+a:visited { color: #666; }
+a:hover { color: #fff; }
+
+.fieldWithErrors {
+  padding: 1px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+	color: #000;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#main_navigation ul li{
+	list-style: none;
+	float: left;
+	text-transform: lowercase;
+	width: 90px;
+}
+
+.clear {
+	clear: both;
+}
+
+h1 {
+	font-variant: small-caps;
+	text-transform: lowercase;
+	color: #222;
+	font-size: 60px;
+	line-height: 62px;
+}
+
+h2 {
+	font-variant: small-caps;
+	text-transform: lowercase;
+	color: #444;
+	font-size: 30px;
+	line-height: 32px;
+}
+
+.active {
+	font-variant: small-caps;
+	text-transform: lowercase;
+}
+
+.new, .edit, .delete, .cancel {
+	font-variant: small-caps;
+	text-transform: lowercase;
+	color: red;
+}
+label {
+	display:none;
+}
+input {
+	margin: 0 auto;
+	background-color: #000;
+	color: #999;
+	border: 1px solid purple;
+	font-size: 30px;
+	font-weight: normal;
+	padding: 10px;
+	width: 900px;
+}
+input.submit {
+	width: 320px;
+}
+
+textarea {
+	background-color: #000;
+	color: #999;
+	border: 1px solid purple;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 10px;
+	width: 900px;
+	margin: 0 auto;
+}

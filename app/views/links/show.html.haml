@@ -1,0 +1,10 @@
+- @active_tab = :links
+- title "#{h @link.title}"
+
+%p= h @link.description
+
+%p= h @link.url
+
+= link_to 'Edit', edit_link_path(@link)
+|
+= link_to 'Go Back to All Links', links_path

@@ -1,0 +1,26 @@
+- @active_tab = :press
+- title 'New Press Story'
+
+- form_for(@press_story) do |f|
+  
+  = f.error_messages
+  
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  
+  %p
+    = f.label :url
+    %br/
+    = f.text_field :url
+  
+  %p
+    = f.submit 'Create'
+    or
+    = link_to 'Cancel and Go Back', press_stories_path

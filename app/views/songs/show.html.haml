@@ -1,0 +1,10 @@
+- @active_tab = :music
+- title "#{h @song.title}"
+
+%p
+  %b Description:
+  = h @song.description
+
+= link_to 'Edit', edit_song_path(@song)
+|
+= link_to 'Go Back to All Songs', songs_path

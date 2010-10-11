@@ -1,0 +1,21 @@
+- @active_tab = :blog
+- title "Edit Blog Post: #{h @blog_post.title}"
+  
+- form_for(@blog_post) do |f|
+
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+
+  %p
+    = f.submit 'Save Changes'
+    or
+    = link_to 'Cancel and Go Back', blog_posts_path

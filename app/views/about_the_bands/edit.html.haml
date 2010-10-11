@@ -1,0 +1,21 @@
+- @active_tab = :about
+- title "Edit About #{h @about_the_band.title}", true
+
+- form_for(@about_the_band) do |f|
+  
+  = f.error_messages
+  
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  
+  %p
+    = f.submit 'Save Changes', :class => 'submit'
+    
+    = link_to 'or Cancel and Go Back', about_the_bands_path, :class => 'cancel'

@@ -1,0 +1,20 @@
+- @active_tab = :about
+- title "New About", true
+
+- form_for(@about_the_band) do |f|
+
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title, :value => 'title'
+
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description, :value => 'description'
+
+  %p
+    = f.submit 'Create'
+    = link_to 'or Cancel and Go Back', about_the_bands_path, :class => 'cancel'

@@ -1,0 +1,24 @@
+- @active_tab = :music
+- title "Edit Song #{song.title}"
+  
+- form_for(@song, :html => {:multipart => true}) do |f|
+  
+  = f.error_messages
+  
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  
+  %p
+    = f.label :mp3
+    = f.file_field :mp3
+  
+  %p
+    = f.submit 'Save Changes'
+    = link_to 'Cancel and Go Back', songs_path

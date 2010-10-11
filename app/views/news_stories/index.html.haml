@@ -1,0 +1,17 @@
+- @active_tab = :news
+- title 'News'
+
+%table
+  %tr
+    %th Title
+    %th Description
+  - @news_stories.each do |news_story|
+    %tr
+      %td= h news_story.title
+      %td= h news_story.description
+      %td= link_to 'Show', news_story
+      %td= link_to 'Edit', edit_news_story_path(news_story)
+      %td= link_to 'Delete', news_story, :confirm => "Are you sure you want to delete #{news_story.title}?", :method => :delete
+
+%br/
+= link_to 'New', new_news_story_path

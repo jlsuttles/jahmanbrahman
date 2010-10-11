@@ -1,0 +1,26 @@
+- @active_tab = :links
+- title "Edit Link #{@link.title}"
+
+- form_for(@link) do |f|
+
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+
+  %p
+    = f.label :url
+    %br/
+    = f.text_field :url
+
+  %p
+    = f.submit 'Save Changes'
+    or
+    = link_to 'Cancel and Go Back', links_path

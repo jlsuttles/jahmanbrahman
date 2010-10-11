@@ -1,0 +1,12 @@
+%ul
+  %li= link_to 'Home',    root_path,                  :class => active_when(:home)
+  %li= link_to 'About',   about_the_bands_path,       :class => active_when(:about)
+  %li= link_to 'Photos',  band_photos_path,           :class => active_when(:photos)
+  %li= link_to 'Blog',    blog_posts_path,            :class => active_when(:blog)
+  %li= link_to 'Contact', contact_informations_path,  :class => active_when(:contact)
+  %li= link_to 'Links',   links_path,                 :class => active_when(:links)
+  %li= link_to 'News',    news_stories_path,          :class => active_when(:news)
+  %li= link_to 'Press',   press_stories_path,         :class => active_when(:press)
+  %li= link_to 'Shows',   shows_path,                 :class => active_when(:shows)
+  %li= link_to 'Music',   songs_path,                 :class => active_when(:songs)
+.clear
