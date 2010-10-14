@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
                 :songs,
                 :press_stories, 
                 :links,
-                :about_the_bands,
+                :abouts,
                 :contact_informations
 
   # The priority is based upon order of creation: first created -> highest priority.

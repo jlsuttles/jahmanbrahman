@@ -1,3 +1,3 @@
-class AboutTheBand < ActiveRecord::Base
+class About < ActiveRecord::Base
   validates_presence_of :title, :description
 end
