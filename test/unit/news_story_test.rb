@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class NewsStoryTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  test "should be invalid with empty attributes" do
+    news = NewsStory.new
+    assert !news.valid?
+    assert news.errors.invalid? :title
+    assert news.errors.invalid? :description
   end
+  
 end

@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class BandPhotoTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  test "should be invalid with empty attributes" do
+    photo = BandPhoto.new
+    assert !photo.valid?
+    assert photo.errors.invalid? :title
+    assert photo.errors.invalid? :description
   end
+  
 end

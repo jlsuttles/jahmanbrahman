@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class SongTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  test "should be invalid with empty attributes" do
+    song = Song.new
+    assert !song.valid?
+    assert song.errors.invalid? :title
+    assert song.errors.invalid? :description
   end
+  
 end

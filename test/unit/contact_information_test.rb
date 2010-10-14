@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class ContactInformationTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  
+  test "should be invalid with empty attributes" do
+    contact = ContactInformation.new
+    assert !contact.valid?
+    assert contact.errors.invalid? :title
+    assert contact.errors.invalid? :description
   end
+  
 end
