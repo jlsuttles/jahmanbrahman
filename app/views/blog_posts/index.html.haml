@@ -1,21 +1,13 @@
 - @active_tab = :blog
 - title 'Blog', true
 
-%table
-  %tr
-    %th Title
-    %th Description
-    %th Created At
-    %th Updated At
-  - @blog_posts.each do |blog_post|
-    %tr
-      %td= h blog_post.title
-      %td= blog_post.description
-      %td= h blog_post.created_at
-      %td= h blog_post.updated_at
-      %td= link_to 'Show', blog_post
-      %td= link_to 'Edit', edit_blog_post_path(blog_post)
-      %td= link_to 'Delete', blog_post, :confirm => "Are you sure you want to delete #{blog_post.title}?", :method => :delete
+= link_to 'New', new_blog_post_path, :class => 'new'
 
-%br/
-= link_to 'New', new_blog_post_path
+- @blog_posts.each do |blog_post|
+  .section
+    %h2= h blog_post.title
+    = link_to 'Edit', edit_blog_post_path(blog_post), :class => 'edit'
+    = link_to 'Delete', blog_post, :class => 'delete',
+      :confirm => "Are you sure you want to delete #{blog_post.title}?", 
+      :method => :delete
+    %p= blog_post.description
