@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.root :controller => 'index', :action => 'index'
+  map.root :controller => 'home', :action => 'index'
   map.resources :shows,
                 :news_stories,
                 :band_photos,
