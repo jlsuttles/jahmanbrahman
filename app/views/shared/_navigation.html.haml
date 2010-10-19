@@ -9,4 +9,10 @@
   %li= link_to 'Press',   press_stories_path,         :class => active_when(:press)
   %li= link_to 'Shows',   shows_path,                 :class => active_when(:shows)
   %li= link_to 'Music',   songs_path,                 :class => active_when(:songs)
+  - if current_user
+    %li= link_to 'Edit Profile', edit_user_path(:current)
+    %li= link_to 'Logout', logout_path
+  - else
+    %li= link_to 'Register', new_user_path
+    %li= link_to 'Login', login_path
 .clear
