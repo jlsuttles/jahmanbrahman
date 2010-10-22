@@ -7,7 +7,7 @@
       = yield(:title) || "Untitled"
     = stylesheet_link_tag 'scaffold'
     = yield(:head)
-  %body
+  %body{:class => body_classes}
   
     #container
       #main_navigation

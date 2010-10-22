@@ -1,5 +1,7 @@
 class SongsController < ApplicationController
 
+  before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
+
   def index
     @songs = Song.all
   end

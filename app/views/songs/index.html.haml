@@ -1,18 +1,17 @@
 - @active_tab = :music
 - title 'Music'
+
+- if current_user and current_user.admin?
+  = link_to 'New', new_song_path
+  
 %table
-  %tr
-    %th Title
-    %th Description
-    %th URL
   - @songs.each do |song|
     %tr
       %td= h song.title
       %td= h song.description
       %td= h song.mp3.url
-      %td= link_to 'Show', song
-      %td= link_to 'Edit', edit_song_path(song)
-      %td= link_to 'Delete', song, :confirm => "Are you sure you want to delete #{song.title}?", :method => :delete
-
-%br/
-= link_to 'New', new_song_path
+      - if current_user and current_user.admin?
+        %td= link_to 'Edit', edit_song_path(song)
+        %td= link_to 'Delete', song, 
+          :confirm => "Are you sure you want to delete #{song.title}?", 
+          :method => :delete

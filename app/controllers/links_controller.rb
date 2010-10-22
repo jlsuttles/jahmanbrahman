@@ -1,5 +1,7 @@
 class LinksController < ApplicationController
 
+  before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
+
   def index
     @links = Link.all
   end

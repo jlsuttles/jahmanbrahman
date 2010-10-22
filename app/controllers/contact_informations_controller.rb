@@ -1,5 +1,7 @@
 class ContactInformationsController < ApplicationController
 
+  before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
+
   def index
     @contact_informations = ContactInformation.all
   end
