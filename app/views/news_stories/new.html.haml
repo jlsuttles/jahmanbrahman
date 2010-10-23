@@ -2,20 +2,7 @@
 - title 'New News Story'
 
 - form_for(@news_story) do |f|
-
   = f.error_messages
-
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-
-  %p
-    = f.submit 'Create'
-    or
-    = link_to 'Go Back', news_stories_path
+  = render :partial => 'form', :object => f
+  = f.submit 'Create', :class => 'submit'
+  = link_to 'Cancel', news_stories_path, :class => 'cancel'

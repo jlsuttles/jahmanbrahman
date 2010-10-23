@@ -1,8 +1,9 @@
-%h1 Edit My Account
+- @active_tab = :user
+- title "Edit User #{@user.login}"
+
 - form_for @user do |f|
   = f.error_messages
   = render :partial => "form", :object => f
-  = f.submit "Update"
-%br/
-= link_to "My Profile", user_path
+  = f.submit "Save Changes", :class => 'submit'
+  = link_to "Cancel", user_path, :class => 'cancel'
 

@@ -2,30 +2,7 @@
 - title "Edit Show #{@show.title}"
   
 - form_for(@show) do |f|
-  
   = f.error_messages
-  
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-  
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-  
-  %p
-    = f.label :date
-    %br/
-    = f.date_select :date
-  
-  %p
-    = f.label :time
-    %br/
-    = f.time_select :time
-  
-  %p
-    = f.submit 'Save Changes'
-    or
-    = link_to 'Cancel and Go Back', shows_path
+  = render :partial => 'form', :object => f
+  = f.submit 'Save Changes', :class => 'submit'
+  = link_to 'Cancel', shows_path, :class => 'cancel'
