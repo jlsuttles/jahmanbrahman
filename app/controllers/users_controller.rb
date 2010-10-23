@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  def admin?
-    role == 'admin'
-  end
-
   def new
     @user = User.new
   end
