@@ -1,16 +1,13 @@
 - @active_tab = :blog
-- title "#{h @blog_post.title}"
+- title "#{h @blog_post.title}", true
 
 %p
   %b Created At:
   = h @blog_post.created_at
-
 %p
   %b Updated At:
   = h @blog_post.updated_at
-
 %p= h @blog_post.description
 
-= link_to 'Edit', edit_blog_post_path(@blog_post)
-|
-= link_to 'Go Back to All Blog Posts', blog_posts_path
+= link_to 'Edit', edit_blog_post_path(@blog_post), :class => 'edit'
+= link_to 'Back', blog_posts_path, :class => 'back'

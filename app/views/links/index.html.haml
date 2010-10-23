@@ -1,15 +1,15 @@
 - @active_tab = :links
 - title 'Links'
 
-- if current_user and current_user.admin?
+- if current_user.try :admin?
   = link_to 'New', new_link_path, :class => 'new'
 
 - @links.each do |link|
   .section
     %h2= link_to (h link.title), link.url
-    - if current_user and current_user.admin?
+    %p= link.description
+    - if current_user.try :admin?
       = link_to 'Edit', edit_link_path(link), :class => 'edit'
       = link_to 'Delete', link, :class => 'delete',
         :confirm => "Are you sure you want to delete #{link.title}?", 
         :method => :delete
-    %p= link.description

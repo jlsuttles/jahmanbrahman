@@ -1,5 +1,5 @@
 - @active_tab = :photos
-- title "Edit Photo #{h @band_photo.title}"
+- title "Edit #{h @band_photo.title}"
   
 - form_for(@band_photo, :html => {:multipart => true}) do |f|
   = f.error_messages

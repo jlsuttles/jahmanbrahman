@@ -1,15 +1,15 @@
 - @active_tab = :about
 - title "About", true
 
-- if current_user and current_user.admin?
+- if current_user.try :admin?
   = link_to 'New', new_about_path, :class => 'new'
 
 - @abouts.each do |about|
   .section
     %h2= h about.title
-    - if current_user and current_user.admin?
+    %p= about.description
+    - if current_user.try :admin?
       = link_to 'Edit', edit_about_path(about), :class => 'edit'
       = link_to 'Delete', about, :class => 'delete',
         :confirm => "Are you sure you want to delete #{about.title}?", 
         :method => :delete
-    %p= about.description

@@ -1,13 +1,13 @@
 - @active_tab = :photos
 - title 'Photos', true
 
-- if current_user and current_user.admin?
+- if current_user.try :admin?
   = link_to 'New', new_band_photo_path
 
 - @band_photos.each do |band_photo|
-  %img{ :src => "#{h band_photo.file.url}" }
-  = link_to 'Show', band_photo
-  - if current_user and current_user.admin?
+  %a{ :href => "#{band_photo}" }
+    %img{ :src => "#{h band_photo.file.url}" }
+  - if current_user.try :admin?
     = link_to 'Edit', edit_band_photo_path(band_photo)
     = link_to 'Delete', band_photo, 
       :confirm => "Are you sure you want to delete the photo titled '#{band_photo.title}'?", 

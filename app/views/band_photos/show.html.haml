@@ -1,8 +1,8 @@
 - @active_tab = :photos
-- title "#{h @band_photo.title}"
+- title "#{h @band_photo.title}", true
 
 %p= h @band_photo.description
 
-= link_to 'Edit', edit_band_photo_path(@band_photo)
-|
-=link_to 'Go Back to All Band Photos', band_photos_path
+
+= link_to 'Edit', edit_band_photo_path(@band_photo), :class => 'edit'
+= link_to 'Back', band_photos_path, :class => 'back'

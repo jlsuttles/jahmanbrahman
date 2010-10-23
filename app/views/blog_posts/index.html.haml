@@ -1,15 +1,15 @@
 - @active_tab = :blog
 - title 'Blog', true
 
-- if current_user and current_user.admin?
+- if current_user.try :admin?
   = link_to 'New', new_blog_post_path, :class => 'new'
 
 - @blog_posts.each do |blog_post|
   .section
     %h2= h blog_post.title
-    - if current_user and current_user.admin?
+    %p= blog_post.description
+    - if current_user.try :admin?
       = link_to 'Edit', edit_blog_post_path(blog_post), :class => 'edit'
       = link_to 'Delete', blog_post, :class => 'delete',
         :confirm => "Are you sure you want to delete #{blog_post.title}?", 
         :method => :delete
-    %p= blog_post.description

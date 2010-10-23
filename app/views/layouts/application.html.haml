@@ -12,9 +12,12 @@
     #container
       #main_navigation
         = render :partial => 'shared/navigation'
-    
-      %p{:style => "color: green"}= notice
-    
+        
+        - if flash[:notice]
+          .notice= flash[:notice]
+        - if flash[:error]
+          .error= flash[:error]
+
       %h1= yield(:title) if show_title?
     
       = yield

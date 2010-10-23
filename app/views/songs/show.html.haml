@@ -1,10 +1,8 @@
 - @active_tab = :music
-- title "#{h @song.title}"
+- title "#{h @song.title}", true
 
-%p
-  %b Description:
-  = h @song.description
+%p= h @song.description
+%p= h @song.mp3.url
 
-= link_to 'Edit', edit_song_path(@song)
-|
-= link_to 'Go Back to All Songs', songs_path
+= link_to 'Edit', edit_song_path(@song), :class => 'edit'
+= link_to 'Back', songs_path, :class => 'back'

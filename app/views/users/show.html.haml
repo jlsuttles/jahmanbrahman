@@ -1,3 +1,6 @@
+- @active_tab = :user
+- title "#{h @user.login}", true
+
 %p
   %b Login:
   = h @user.login
@@ -11,5 +14,5 @@
   %b Last login at:
   = h @user.last_login_at
 
-= link_to 'Edit', edit_user_path
+= link_to 'Edit', edit_user_path, :class => 'edit'
 

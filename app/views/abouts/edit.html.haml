@@ -1,5 +1,8 @@
 - @active_tab = :about
-- title "Edit About #{h @about.title}", true
+- title "Edit #{h @about.title}", true
+
+%h2 Current description:
+%p= h @about.description
 
 - form_for(@about) do |f|
   = f.error_messages

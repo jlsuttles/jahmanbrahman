@@ -1,5 +1,5 @@
 - @active_tab = :user
-- title "Edit User #{@user.login}"
+- title "Edit #{@user.login}", true
 
 - form_for @user do |f|
   = f.error_messages
