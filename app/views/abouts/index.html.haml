@@ -10,6 +10,6 @@
     %p= about.description
     - if current_user.try :admin?
       = link_to 'Edit', edit_about_path(about), :class => 'edit'
-      = link_to 'Delete', about, :class => 'delete',
+      = link_to 'Delete', about,
         :confirm => "Are you sure you want to delete #{about.title}?", 
         :method => :delete

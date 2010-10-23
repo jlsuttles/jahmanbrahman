@@ -2,8 +2,17 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => 'home', :action => 'index'
   
-  map.login "login", :controller => "user_sessions", :action => "new"
-  map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  map.register  "register", :controller => "users",                 :action => "new"
+  map.login     "login",    :controller => "user_sessions",         :action => "new"
+  map.logout    "logout",   :controller => "user_sessions",         :action => "destroy"
+  
+  map.about_us  "about_us", :controller => "abouts",                :action => "index"
+  map.photos    "photos",   :controller => "band_photos",           :action => "index"
+  map.blog      "blog",     :controller => "blog_posts",            :action => "index"
+  map.contact   "contact",  :controller => "contact_informations",  :action => "index"
+  map.music     "music",    :controller => "songs",                 :action => "index"
+  map.news      "news",     :controller => "news_stories",          :action => "index"
+  map.press     "press",    :controller => "press_stories",         :action => "index"
   
   map.resources :abouts
   map.resources :band_photos
