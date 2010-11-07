@@ -10,3 +10,8 @@
 = form.label :password_confirmation
 = form.password_field :password_confirmation
 
+- if current_user.try :admin? or current_user.try :band?
+  = form.label :role
+  = form.select :role, User::ROLES
+- else
+  = form.hidden_field :role, :value => (current_user ? current_user.role : "fan")

@@ -1,3 +1,10 @@
+img {
+	position: absolute;
+  display: block;
+  width: 1020px;
+  height: 1020px;
+}
+
 body { 
 	background-color: #000; 
 	color: #fff; }
@@ -92,35 +99,12 @@ h2 {
 	text-transform: lowercase;
 }
 
-.new, .edit, .delete, .cancel {
+a.new, a.edit, a.delete, a.cancel {
 	font-variant: small-caps;
 	text-transform: lowercase;
 	color: red;
 }
-label {
-	display:none;
-}
-input {
-	margin: 0 auto;
-	background-color: #000;
-	color: #999;
-	border: 1px solid purple;
-	font-size: 30px;
-	font-weight: normal;
-	padding: 10px;
-	width: 900px;
-}
-input.submit {
-	width: 320px;
-}
 
-textarea {
-	background-color: #000;
-	color: #999;
-	border: 1px solid purple;
-	font-size: 20px;
-	font-weight: normal;
-	padding: 10px;
-	width: 900px;
-	margin: 0 auto;
+label{
+	display: block;
 }
