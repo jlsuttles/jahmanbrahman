@@ -1,7 +1,7 @@
 - @active_tab = :about
-- title "About #{h @about.title}", true
+- title "#{h @about.title}", true
 
 %p=h @about.description
 
 = link_to 'Edit', edit_about_path(@about), :class => 'edit'
-=link_to 'Go Back to About the Bands', abouts_path, :class => 'cancel'
+= link_to 'Back', abouts_path, :class => 'back'

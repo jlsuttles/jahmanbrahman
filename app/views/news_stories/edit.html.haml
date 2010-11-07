@@ -1,21 +1,8 @@
 - @active_tab = :news
-- title "Edit News Story #{@news_story.title}"
+- title "Edit #{@news_story.title}"
 
 - form_for(@news_story) do |f|
-
   = f.error_messages
-
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-
-  %p
-    = f.submit 'Save Changes'
-    or
-    = link_to 'Back', news_stories_path
+  = render :partial => 'form', :object => f
+  = f.submit 'Save Changes', :class => 'submit'
+  = link_to 'Cancel', news_stories_path, :class => 'cancel'

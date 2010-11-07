@@ -1,8 +1,7 @@
 - @active_tab = :news
-- title "#{h @news_story.title}"
+- title "#{h @news_story.title}", true
 
 %p= h @news_story.description
 
-= link_to 'Edit', edit_news_story_path(@news_story)
-|
-= link_to 'Go Back to All News Stories', news_stories_path
+= link_to 'Edit', edit_news_story_path(@news_story), :class => 'edit'
+= link_to 'Back', news_stories_path, :class => 'back'

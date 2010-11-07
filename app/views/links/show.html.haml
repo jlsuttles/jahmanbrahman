@@ -1,10 +1,8 @@
 - @active_tab = :links
-- title "#{h @link.title}"
+- title "#{h @link.title}", true
 
 %p= h @link.description
-
 %p= h @link.url
 
-= link_to 'Edit', edit_link_path(@link)
-|
-= link_to 'Go Back to All Links', links_path
+= link_to 'Edit', edit_link_path(@link), :class => 'edit'
+= link_to 'Back', links_path, :class => 'back'

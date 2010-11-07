@@ -1,25 +1,8 @@
 - @active_tab = :music
-- title 'New Song'
+- title 'New Song', true
 
 - form_for(@song, :html => {:multipart => true}) do |f|
-  
   = f.error_messages
-  
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-  
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-  
-  %p
-    = f.label :mp3
-    = f.file_field :mp3
-    
-  %p
-    = f.submit 'Create'
-    or
-    = link_to 'Cancel and Go Back', songs_path
+  = render :partial => 'form', :object => f
+  = f.submit 'Create', :class => 'submit'
+  = link_to 'Cancel', songs_path, :class => 'cancel'

@@ -1,0 +1,9 @@
+- @active_tab = :user
+- title "Edit #{@user.login}", true
+
+- form_for @user do |f|
+  = f.error_messages
+  = render :partial => "form", :object => f
+  = f.submit "Save Changes", :class => 'submit'
+  = link_to "Cancel", user_path, :class => 'cancel'
+

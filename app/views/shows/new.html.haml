@@ -1,31 +1,8 @@
 - @active_tab = :shows
-- title 'New Show'
+- title 'New Show', true
 
 - form_for(@show) do |f|
-
   = f.error_messages
-
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-
-  %p
-    = f.label :description
-    %br/
-    = f.text_area :description
-
-  %p
-    = f.label :date
-    %br/
-    = f.date_select :date
-
-  %p
-    = f.label :time
-    %br/
-    = f.time_select :time
-
-  %p
-    = f.submit 'Create'
-    or
-    = link_to 'Cancel and Go Back', shows_path
+  = render :partial => 'form', :object => f
+  = f.submit 'Create', :class => 'submit'
+  = link_to 'Cancel', shows_path, :class => 'cancel'

@@ -1,13 +1,15 @@
 - @active_tab = :contact
 - title 'Contact'
 
-= link_to 'New', new_contact_information_path, :class => 'new'
+- if current_user.try :admin?
+  = link_to 'New', new_contact_information_path, :class => 'new'
 
 - @contact_informations.each do |contact_information|
   .section
     %h2= h contact_information.title
-    = link_to 'Edit', edit_contact_information_path(contact_information), :class => 'edit'
-    = link_to 'Delete', contact_information, :class => 'delete',
-      :confirm => "Are you sure you want to delete #{contact_information.title}?", 
-      :method => :delete
     %p= contact_information.description
+    - if current_user.try :admin?
+      = link_to 'Edit', edit_contact_information_path(contact_information), :class => 'edit'
+      = link_to 'Delete', contact_information, :class => 'delete',
+        :confirm => "Are you sure you want to delete #{contact_information.title}?", 
+        :method => :delete
