@@ -1,0 +1,3 @@
+authlogic -v2.1.5
+aws-s3    -v0.6.2
+paperclip -v2.3.5

@@ -1,9 +1,9 @@
 class BandPhoto < ActiveRecord::Base
   #attr_accessible :title, :description
   
-  has_attached_file :file, 
-    :path => ":rails_root/public/images/:class/:id_:style.:extension",
-    :url => "/:class/:id_:style.:extension"
+  has_attached_file :file, Paperclip::Config.merge({
+    :styles => { "thumb" => "160x160#" }
+  })
   
   validates_presence_of :title, :description
   validates_attachment_presence :file

@@ -1,0 +1,14 @@
+production:
+  bucket: "jahmanbrahman-<%= Rails.env %>"
+  path: "/:class/:id_:style.:extension"
+  storage: "s3"
+
+  s3_credentials:
+    access_key_id:     <%= ENV["AWS_S3_ACCESS_KEY_ID"] %>
+    secret_access_key: <%= ENV["AWS_S3_SECRET_ACCESS_KEY"] %>
+
+development:
+  path: ":rails_root/public/images/:class/:id_:style.:extension"
+  url: "/:class/:id_:style.:extension"
+  
+

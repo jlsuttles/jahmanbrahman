@@ -6,6 +6,14 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
 
+User.create({
+  :email    => "jlsuttles@gmail.com",
+  :login    => "admin",
+  :password => "Password1",
+  :password_confirmation => "Password1",
+  :role     => "admin",
+})
+
 About.create([
   { :title => 'Jahman Brahman',
     :description => '<p>Jahman Brahman is a genre bending band based out of Columbus, Ohio. With a diverse lineup of unique personalities, they attempt to leave no musical stone unturned. From December 2005 until December 2008 Jahman Brahman was four members: Casey Chanatry on guitar/vocals, Justin Brown on guitar/vocals, Nathan Brown on bass/vocals, and Rowdy Keelor on drums/vocals. With the recent addition of Josh Loffer on keys, Jahman Brahman has finally taken its complete shape. Wasting no time, they have been busy playing action-packed shows all around Central Ohio. 

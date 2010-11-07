@@ -1,6 +1,8 @@
 - @active_tab = :photos
 - title "#{h @band_photo.title}", true
 
+= image_tag @band_photo.file(:original)
+
 %p= h @band_photo.description
 
 
