@@ -101,3 +101,7 @@ a.new, a.edit, a.delete, a.cancel {
 label{
 	display: block;
 }
+
+.band_photos.new input[type=file] {
+  color: white;
+}

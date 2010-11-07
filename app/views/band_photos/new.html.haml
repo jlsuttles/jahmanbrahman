@@ -1,8 +1,13 @@
 - @active_tab = :photos
 - title 'New Band Photo', true
 
-- form_for(@band_photo, :html => {:multipart => true}) do |f|
-  = f.error_messages
-  = render :partial => 'form', :object => f
+- form_for(@band_photo_collection, :url => band_photos_path, :html => {:multipart => true}) do |f|
+  #new_photos
+    - f.fields_for :band_photos, :child_index => "" do |photo|
+      .new_photo_form
+        = photo.error_messages
+        = render :partial => 'form', :object => photo
+
   = f.submit 'Create', :class => 'submit'
+  = link_to_function "Add", "$('#new_photos').append($('.new_photo_form:first-child').clone());"
   = link_to 'Cancel', band_photos_path, :class => 'cancel'

@@ -11,7 +11,7 @@ class BandPhotosController < ApplicationController
   end
 
   def new
-    @band_photo = BandPhoto.new
+    @band_photo_collection = BandPhotoCollection.new
   end
 
   def edit
@@ -19,9 +19,9 @@ class BandPhotosController < ApplicationController
   end
 
   def create
-    @band_photo = BandPhoto.new(params[:band_photo])
-    if @band_photo.save
-      redirect_to(@band_photo, :notice => 'BandPhoto was successfully created.') 
+    @band_photo_collection = BandPhotoCollection.new(params[:band_photo_collection])
+    if @band_photo_collection.save
+      redirect_to(band_photos_path, :notice => 'BandPhoto(s) were successfully created.') 
     else
       render :action => "new"
     end
