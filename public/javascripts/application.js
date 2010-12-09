@@ -1,24 +1,21 @@
-//http://github.com/nummi/JavaScript-Snippets
 (function($) {
-  // Adapted from Jonathan Snook
-  $.fn.actAsSlideshow = function(options) {
-    var opts = $.extend({}, $.fn.actAsSlideshow.defaults, options);
 
-    return this.each(function() {
-      var container = $(this);
-      container.find('img:gt(0)').hide();
-      setInterval(function(){
-        container.find(':first-child').fadeOut()
-                 .next('img').fadeIn(350)
-                 .end().appendTo(container);
-      }, opts.speed);
-    });
+  $.fn.cycleColors = function(colorList, time) {
+    if (typeof(time) == 'undefined') time = 5000;
+    var elem = $(this);
+    var color = 0;
+
+    nextColor = function() {
+      elem.animate({backgroundColor: colorList[color]}, time, null, nextColor);
+      color = (color + 1) % colorList.length;
+    }
+
+    nextColor();
   };
 
-  $.fn.actAsSlideshow.defaults = { speed: 3500 };
 	
 	$(document).ready(function(){
-		$('#slideshow').actAsSlideshow({ speed: 2000 });
+		$('#colors').cycleColors(['#600', '#660', '#060', '#066', '#006', '#606']);
 		});	
 
 })(jQuery);

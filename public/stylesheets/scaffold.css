@@ -1,6 +1,147 @@
 body { 
 	background-color: #000; 
-	color: #fff; }
+	color: #fff; 
+  height: 100%; /* does anything? */
+  min-width: 960px;
+  padding: 0;
+  width: 100%;
+}
+
+#colors,
+#mountains,
+#mountains-top, 
+#mountains-middle, 
+#mountains-bottom {
+  background-repeat: repeat-x;
+  height: 400px;
+  min-width: 1500px;
+  width: 100%;
+  position: absolute;
+}
+
+#colors {
+  background-color: purple;
+}
+
+#mountains {
+  background-image: url('/images/mountains-color-smaller.png');
+  opacity: 0.5;
+}
+
+#mountains-top {
+  background-image: url('/images/mountains-top-smaller.png');
+  opacity: 1;
+}
+
+#mountains-bottom {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  opacity: 1;
+}
+
+#mountains-middle {
+  height: 400px;
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
+}
+
+#colors #lights,
+#colors #band,
+#colors #crowd,
+#colors #trees {
+  height: 400px;
+  width: 960px;
+  overflow: hidden;
+  position: absolute;
+}
+
+#colors #lights img,
+#colors #band img,
+#colors #crowd img,
+#colors #trees img{
+  position: absolute;
+}
+
+#lights img {
+  width: 500px;
+  opacity: 0.3;
+}
+
+#lights img.one {
+  left: 50px;
+  top: -100px;
+}
+
+#lights img.two {
+  left: 200px;
+  top: -85px;
+}
+
+#lights img.three {
+  right: 50px;
+  top: -100px;
+}
+
+#band .casey img {
+  top: 160px;
+  left: 350px;
+  height: 160px;
+}
+
+#band .nate img {
+  top: 115px;
+  left: 275px;
+  height: 150px;
+}
+
+#band .josh img {
+  top: 135px;
+  left: 520px;
+  height: 145px;
+}
+
+#band .justin img {
+  top: 190px;
+  left: 430px;
+  height: 140px;
+}
+
+#band .rowdy img {
+  top: 75px;
+  left: 375px;
+  height: 150px;
+}
+
+#crowd {
+  overflow: hidden;
+}
+
+#crowd img {
+  height: 70%;
+  top: 230px;
+  left: 30px;
+}
+
+#colors #trees {
+  overflow: visible;
+}
+
+#trees img.one {
+  left: 600px;
+  top: 50px;
+  height: 400px;
+}
+
+#trees img.two {
+  left: -75px;
+  top: 50px;
+  height: 400px;
+}
+
+/*
+ *  REGULAR STUFFS
+ *
+ */
 
 body, p, ol, ul, td {
   font-family: helvetica, arial, verdana, sans-serif;
@@ -55,16 +196,24 @@ a:hover { color: #fff; }
   list-style: square;
 }
 
-#container {
-	width: 960px;
-	margin: 0 auto;
+#main_navigation,
+#main_content{
+  width: 960px;
+  margin: 0 auto;
 }
 
 #main_navigation ul li{
 	list-style: none;
 	float: left;
 	text-transform: lowercase;
-	width: 90px;
+  font-variant: small-caps;
+  text-decoration: none;
+	width: 70px;
+  text-align: center;
+}
+
+#main_content{
+  top: 450px;
 }
 
 .clear {
