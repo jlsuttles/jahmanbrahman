@@ -1,4 +1,4 @@
-source :rubygems :github
+source :rubygems, :github
 gem "authlogic",  "~> 2.1.5"
 gem "aws-s3",     "~> 0.6.2"
 gem "haml",       "~> 3.0.23"
