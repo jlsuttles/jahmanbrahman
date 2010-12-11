@@ -13,23 +13,28 @@ body {
 #mountains-top, 
 #mountains-middle, 
 #mountains-bottom {
-  background-repeat: repeat-x;
   height: 400px;
   width: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
 #colors {
   background-color: purple;
 }
 
-#mountains {
-  background-image: url('/images/mountains-color-smaller.png');
+#mountains img {
+  position: absolute;
+  left: 50%;
+  margin-left: -720px;
+  height: 500px;
+  width: 1440px;
   opacity: 0.5;
 }
 
 #mountains-top {
   background-image: url('/images/mountains-top-smaller.png');
+  background-repeat: repeat-x;
   opacity: 1;
 }
 
@@ -227,14 +232,18 @@ a:hover { color: #fff; }
   margin: 0 auto;
 }
 
-#main_navigation ul li{
-	list-style: none;
+#main_navigation ul li {
 	float: left;
-	text-transform: lowercase;
-  font-variant: small-caps;
-  text-decoration: none;
+	list-style: none;
 	width: 150px;
   text-align: center;
+}
+
+#main_navigation ul li a {
+  text-decoration: none;
+	text-transform: lowercase;
+  font-size: 18pt;
+  font-variant: small-caps;
 }
 
 #main_content{
