@@ -2,18 +2,12 @@
   %ul
     %li= link_to 'Home',    root_path,    :class => active_when(:home)
     %li= link_to 'About',   about_us_path,:class => active_when(:about)
-    %li= link_to 'Photos',  photos_path,  :class => active_when(:photos)
-    %li= link_to 'Blog',    blog_path,    :class => active_when(:blog)
-    %li= link_to 'Contact', contact_path, :class => active_when(:contact)
-    %li= link_to 'Links',   links_path,   :class => active_when(:links)
-    %li= link_to 'News',    news_path,    :class => active_when(:news)
-    %li= link_to 'Press',   press_path,   :class => active_when(:press)
-    %li= link_to 'Shows',   shows_path,   :class => active_when(:shows)
     %li= link_to 'Music',   music_path,   :class => active_when(:music)
+    %li= link_to 'News',    news_path,    :class => active_when(:news)
+    %li= link_to 'Shows',   shows_path,   :class => active_when(:shows)
     - if current_user
       %li= link_to 'Edit Profile', edit_user_path(:current)
       %li= link_to 'Logout', logout_path
     - else
-      %li= link_to 'Register', register_path
       %li= link_to 'Login', login_path
   .clear
