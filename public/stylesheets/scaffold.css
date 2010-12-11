@@ -96,7 +96,7 @@ body {
 #band .casey img {
   top: 185px;
   left: 50%;
-  margin-left: 25px;
+  margin-left: -75px;
   width: 90px;
   z-index: 999;
 }
@@ -112,15 +112,15 @@ body {
 #band .justin img {
   top: 200px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: 20px;
   width: 100px;
   z-index: 999;
 }
 
 #band .josh img {
-  top: 125px;
+  top: 112px;
   left: 50%;
-  margin-left: 100px;
+  margin-left: 120px;
   width: 130px;
   z-index: 999;
 }
@@ -131,7 +131,7 @@ body {
 
 #crowd img {
   height: 70%;
-  top: 250px;
+  top: 230px;
   left: 30px;
 }
 
