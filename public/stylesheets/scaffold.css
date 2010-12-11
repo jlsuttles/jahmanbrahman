@@ -50,45 +50,18 @@ body {
   margin-left: -480px;
 }
 
-#colors #lights,
 #colors #band,
-#colors #crowd,
-#colors #trees {
+#colors #crowd{
   height: 400px;
   width: 960px;
   overflow: hidden;
   position: absolute;
 }
 
-#colors #lights img,
 #colors #band img,
-#colors #crowd img,
-#colors #trees img{
+#colors #crowd img{
   position: absolute;
   opacity: 0.7;
-}
-
-#lights img {
-  width: 500px;
-  opacity: 0.3;
-}
-
-#lights img.one {
-  left: 50%;
-  margin-left: -400px;
-  top: -100px;
-}
-
-#lights img.two {
-  left: 50%;
-  margin-left: -250px;
-  top: -85px;
-}
-
-#lights img.three {
-  right: 50%;
-  margin-right: -400px;
-  top: -100px;
 }
 
 #band .nate img {
@@ -139,34 +112,6 @@ body {
   height: 70%;
   top: 230px;
   left: 75px;
-}
-
-#colors #trees {
-  overflow: visible;
-}
-
-#trees img.one {
-  left: 675px;
-  top: 50px;
-  height: 400px;
-}
-
-#trees img.two {
-  left: -125px;
-  top: 50px;
-  height: 400px;
-}
-
-#trees img.three {
-  left: 800px;
-  top: 150px;
-  height: 400px;
-}
-
-#trees img.four {
-  left: -100px;
-  top: 150px;
-  height: 400px;
 }
 
 /*
