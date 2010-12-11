@@ -65,6 +65,7 @@ body {
 #colors #crowd img,
 #colors #trees img{
   position: absolute;
+  opacity: 0.7;
 }
 
 #lights img {
@@ -93,7 +94,7 @@ body {
 #band .nate img {
   top: 115px;
   left: 50%;
-  margin-left: -155px;
+  margin-left: -178px;
   width: 90px;
   z-index: 999;
 }
@@ -101,7 +102,7 @@ body {
 #band .casey img {
   top: 185px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -105px;
   width: 90px;
   z-index: 999;
 }
@@ -109,15 +110,15 @@ body {
 #band .rowdy img {
   top: 65px;
   left: 50%;
-  margin-left: -70px;
+  margin-left: -100px;
   width: 190px;
   z-index: 999;
 }
 
 #band .justin img {
-  top: 200px;
+  top: 190px;
   left: 50%;
-  margin-left: 20px;
+  margin-left: -10px;
   width: 100px;
   z-index: 999;
 }
@@ -125,7 +126,7 @@ body {
 #band .josh img {
   top: 112px;
   left: 50%;
-  margin-left: 120px;
+  margin-left: 90px;
   width: 130px;
   z-index: 999;
 }
@@ -137,7 +138,7 @@ body {
 #crowd img {
   height: 70%;
   top: 230px;
-  left: 30px;
+  left: 75px;
 }
 
 #colors #trees {
