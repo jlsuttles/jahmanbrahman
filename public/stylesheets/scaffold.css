@@ -234,3 +234,16 @@ label{
 .band_photos.new input[type=file] {
   color: white;
 }
+
+#future_shows,
+#past_shows {
+  width: 480px;
+}
+
+#future_shows {
+  float: left;
+}
+
+#past_shows {
+  float: right;
+}

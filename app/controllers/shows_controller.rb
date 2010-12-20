@@ -3,7 +3,8 @@ class ShowsController < ApplicationController
   before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
 
   def index
-    @shows = Show.all
+    @future_shows = Show.past.all
+    @past_shows = Show.future.all
   end
 
   def show

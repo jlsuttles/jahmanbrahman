@@ -16,6 +16,15 @@
 	
 	$(document).ready(function(){
 		$('#colors').cycleColors(['#600', '#660', '#060', '#066', '#006', '#606']);
+  
+    $('#about_carousel_1').jcarousel({
+          // Configuration goes here
+      });
+
+    $('#about_carousel_0').jcarousel({
+          // Configuration goes here
+      });
+    
 		});	
 
 })(jQuery);

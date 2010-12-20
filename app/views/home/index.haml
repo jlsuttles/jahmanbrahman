@@ -2,3 +2,17 @@
 - title 'Home', false
 
 = render :partial => 'animated_header'
+
+- if current_user.try :admin?
+  = link_to 'New', new_news_story_path, :class => 'new'
+
+- @news_stories.each do |news_story|
+  .section
+    %h2= h news_story.title
+    %p= news_story.description
+    - if current_user.try :admin?
+      = link_to 'Edit', edit_news_story_path(news_story), :class => 'edit'
+      = link_to 'Delete', news_story, :class => 'delete',
+        :confirm => "Are you sure you want to delete #{news_story.title}?", 
+        :method => :delete
+
