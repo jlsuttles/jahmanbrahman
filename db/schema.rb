@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101220042424) do
+ActiveRecord::Schema.define(:version => 20101220044816) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20101220042424) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "venue_id"
+  end
+
+  create_table "also_playing_bands", :force => true do |t|
+    t.integer  "band_id"
+    t.integer  "show_id"
+    t.time     "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -94,12 +103,13 @@ ActiveRecord::Schema.define(:version => 20101220042424) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "shows", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.date     "date"
-    t.time     "time"
+    t.string   "name"
+    t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "venue_id"
+    t.datetime "datetime"
+    t.string   "ages"
   end
 
   create_table "songs", :force => true do |t|

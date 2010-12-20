@@ -47,21 +47,3 @@ NewsStory.create([
    
   ])
 
-Show.create([
-  { :title => 'Show1',
-    :description => 'Description1',
-    :date => Date.today - 5.days,
-    :time => Time.now },
-  { :title => 'Show2',
-    :description => 'Description2',
-    :date => Date.today - 5.days,
-    :time => Time.now },
-  { :title => 'Show3',
-    :description => 'Description3',
-    :date => Date.today + 25.days,
-    :time => Time.now },
-  { :title => 'Show4',
-    :description => 'Description4',
-    :date => Date.today + 25.days,
-    :time => Time.now }
-  ])
