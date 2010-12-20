@@ -12,8 +12,7 @@
     = yield(:head)
   %body{:class => body_classes}
   
-    = render :partial => 'shared/navigation'
-    = render :partial => 'shared/animated_header'
+    = render :partial => 'layouts/navigation'
           
     #main_content
       - if flash[:notice]
