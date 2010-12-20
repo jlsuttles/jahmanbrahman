@@ -13,8 +13,10 @@
     = yield(:head)
   %body{:class => body_classes}
   
+    = link_to image_tag('/images/logo.png', :class => 'logo'), '/'
+
     = render :partial => 'layouts/navigation'
-          
+
     #main_content
       - if flash[:notice]
         .notice= flash[:notice]

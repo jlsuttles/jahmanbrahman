@@ -9,6 +9,6 @@ class Show < ActiveRecord::Base
     # has_many    :videos
     # has_many    :comments
 
-    named_scope :future, :conditions => ["date <= ?", Date.today]
-    named_scope :past, :conditions => ["date >= ?", Date.today]
+    named_scope :future, :conditions => ["datetime <= ?", Time.now]
+    named_scope :past, :conditions => ["datetime >= ?", Time.now]
 end
