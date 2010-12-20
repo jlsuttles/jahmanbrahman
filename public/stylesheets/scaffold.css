@@ -20,6 +20,7 @@ body {
 }
 
 #colors {
+  position: relative;
   background-color: purple;
 }
 
@@ -181,7 +182,7 @@ a:hover { color: #fff; }
 #main_navigation ul li {
 	float: left;
 	list-style: none;
-	width: 150px;
+	width: 180px;
   text-align: center;
 }
 
