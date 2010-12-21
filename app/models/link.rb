@@ -1,3 +1,3 @@
 class Link < ActiveRecord::Base
-  validates_presence_of :title, :description, :url
+  validates_presence_of :title, :url#, :description
 end
