@@ -1,35 +1,37 @@
 - @active_tab = :about
 - title "About", false
 
-- if current_user.try :admin?
-  = link_to 'New', new_about_path, :class => 'new'
+#main_content
 
-- @abouts.each_with_index do |about, index|
-  %ul{ :id => "about_carousel_#{index}", :class => "jcarousel-skin-classy" }
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-    %li= image_tag '/images/band01.jpg', :class => "band_thumb"
-  
-  .section
-    %h2= h about.title
-    %p= about.description
-    - if current_user.try :admin?
-      = link_to 'Edit', edit_about_path(about), :class => 'edit'
-      = link_to 'Delete', about,
-        :confirm => "Are you sure you want to delete #{about.title}?", 
-        :method => :delete, :class => 'delete'
+  - if current_user.try :admin?
+    = link_to 'New', new_about_path, :class => 'new'
+
+  - @abouts.each_with_index do |about, index|
+    %ul{ :id => "about_carousel_#{index}", :class => "jcarousel-skin-classy" }
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+      %li= image_tag '/images/band01.jpg', :class => "band_thumb"
+    
+    .section
+      %h2= h about.title
+      %p= about.description
+      - if current_user.try :admin?
+        = link_to 'Edit', edit_about_path(about), :class => 'edit'
+        = link_to 'Delete', about,
+          :confirm => "Are you sure you want to delete #{about.title}?", 
+          :method => :delete, :class => 'delete'

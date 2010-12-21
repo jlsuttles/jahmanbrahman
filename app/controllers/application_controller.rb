@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   filter_parameter_logging :password
   helper_method :current_user_session, :current_user
+  before_filter :load_common_data
+
+  def load_common_data
+    @contact_informations = ContactInformation.all
+  end
 
 private
 
