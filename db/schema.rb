@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101220044816) do
+ActiveRecord::Schema.define(:version => 20101221005421) do
+
+  create_table "about_links", :force => true do |t|
+    t.integer  "about_id"
+    t.integer  "link_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "about_photos", :force => true do |t|
+    t.integer  "about_id"
+    t.integer  "photo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
@@ -80,6 +94,15 @@ ActiveRecord::Schema.define(:version => 20101220044816) do
   create_table "news_stories", :force => true do |t|
     t.string   "title"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
