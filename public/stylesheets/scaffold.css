@@ -141,6 +141,8 @@ body, p, ol, ul, td {
   font-family: helvetica, arial, verdana, sans-serif;
   font-size:   16px;
   line-height: 24px;
+  color: #999;
+  margin: 20px;
 }
 
 pre {
@@ -193,13 +195,13 @@ a:hover { color: #fff; }
 #main_navigation,
 #main_content{
   width: 960px;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 #main_navigation ul li {
 	float: left;
 	list-style: none;
-	width: 220px;
+	width: 175px;
   text-align: center;
 }
 
@@ -221,19 +223,19 @@ a:hover { color: #fff; }
 h1, h2, h3 {
 	font-variant: small-caps;
 	text-transform: lowercase;
-	color: #222;
+	color: #333;
 	font-size: 60px;
 	line-height: 62px;
+  margin: 20px;
+  padding-top: 10px;
 }
 
 h2 {
-	color: #444;
 	font-size: 30px;
 	line-height: 32px;
 }
 
 h3 {
-	color: #444;
 	font-size: 25px;
 	line-height: 27px;
 }
@@ -251,6 +253,22 @@ a.new, a.edit, a.delete, a.cancel {
 
 label{
 	display: block;
+}
+
+.section {
+  background-color: #111;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#000));
+}
+
+.section.left_two_thirds {
+  float: left;
+  width: 640px;
+}
+
+.section.right_one_third {
+  float: right;
+  width: 320px;
+  background-color: #000;
 }
 
 .band_photos.new input[type=file] {

@@ -19,7 +19,9 @@
             :method => :delete
 
   #right_content
-    = render :partial => 'layouts/social_networks'    
+    %h3 Newfields Album Available in iTunes Store
+    = image_tag '/images/newfields_album_cover.jpg', :width => '310px'
+    = render :partial => '/layouts/jplayer_newfields'
     = render :partial => 'layouts/contact'
     = render :partial => 'layouts/mailing_list'
     %h2 Next Show

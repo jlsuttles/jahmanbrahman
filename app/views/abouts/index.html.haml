@@ -27,11 +27,12 @@
       %li= image_tag '/images/band01.jpg', :class => "band_thumb"
       %li= image_tag '/images/band01.jpg', :class => "band_thumb"
     
-    .section
+    
+    .section.left_two_thirds
       %h2= h about.title
       %p= about.description
       - if current_user.try :admin?
         = link_to 'Edit', edit_about_path(about), :class => 'edit'
-        = link_to 'Delete', about,
-          :confirm => "Are you sure you want to delete #{about.title}?", 
-          :method => :delete, :class => 'delete'
+        = link_to 'Delete', about, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete, :class => 'delete'
+    .section.right_one_third
+      %h2= h about.title + " Links"

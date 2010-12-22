@@ -2,6 +2,14 @@
 - title 'Music', false
 
 #main_content
+  .section.left_two_thirds
+    %h2 
+      %i Newfields 
+      Album Available in iTunes Store
+    = image_tag '/images/newfields_album_cover.jpg', :width => '640px'
+  
+  .section.right_one_third
+    = render :partial => '/layouts/jplayer_newfields'
 
   - if current_user.try :admin?
     = link_to 'New', new_song_path
