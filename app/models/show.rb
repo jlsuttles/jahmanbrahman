@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
-    validates_presence_of :datetime, :venue
+    validates_presence_of :datetime, :venue#, :note, :ages
     
     belongs_to  :venue
 

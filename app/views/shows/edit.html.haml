@@ -1,8 +1,9 @@
 - @active_tab = :shows
 - title "Edit #{@show.title}"
-  
-- form_for(@show) do |f|
-  = f.error_messages
-  = render :partial => 'form', :object => f
-  = f.submit 'Save Changes', :class => 'submit'
-  = link_to 'Cancel', shows_path, :class => 'cancel'
+
+#main_content
+  - form_for(@show) do |f|
+    = f.error_messages
+    = render :partial => 'form', :object => f
+    = f.submit 'Save Changes', :class => 'submit'
+    = link_to 'Cancel', shows_path, :class => 'cancel'

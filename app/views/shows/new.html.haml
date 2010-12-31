@@ -1,8 +1,9 @@
 - @active_tab = :shows
 - title 'New Show', true
 
-- form_for(@show) do |f|
-  = f.error_messages
-  = render :partial => 'form', :object => f
-  = f.submit 'Create', :class => 'submit'
-  = link_to 'Cancel', shows_path, :class => 'cancel'
+#main_content
+  - form_for(@show) do |f|
+    = f.error_messages
+    = render :partial => 'form', :object => f
+    = f.submit 'Create', :class => 'submit'
+    = link_to 'Cancel', shows_path, :class => 'cancel'

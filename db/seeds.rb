@@ -47,3 +47,12 @@ NewsStory.create([
    
   ])
 
+Venue.create([
+  { :name => 'Venue1' },
+  { :name => 'Venue2' }
+  ])
+
+Band.create([
+  { :name => 'Band1' },
+  { :name => 'Band2' }
+  ])
