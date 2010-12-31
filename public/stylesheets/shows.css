@@ -1,0 +1,10 @@
+.shows .datetime {
+  text-align: right;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+.section {
+  position: relative;
+}
