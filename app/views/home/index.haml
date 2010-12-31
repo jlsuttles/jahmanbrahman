@@ -4,7 +4,7 @@
 = render :partial => 'animated_header'
 
 #main_content
-  #left_content
+  .section.left_two_thirds
     - if current_user.try :admin?
       = link_to 'New', new_news_story_path, :class => 'new'
 
@@ -18,13 +18,17 @@
             :confirm => "Are you sure you want to delete #{news_story.title}?", 
             :method => :delete
 
-  #right_content
-    %h3 Newfields Album Available in iTunes Store
-    = image_tag '/images/newfields_album_cover.jpg', :width => '310px'
-    = render :partial => '/layouts/jplayer_newfields'
-    = render :partial => 'layouts/contact'
-    = render :partial => 'layouts/mailing_list'
-    %h2 Next Show
-    %h2 Last Show
-    %h2 Newest Video
-    %h2 Newest Photo
+  .section.right_one_third
+    .section
+      %h2 
+        %i Newfields
+      %h3 Available in iTunes Store
+      = image_tag '/images/newfields_album_cover.jpg', :width => '310px'
+      = render :partial => '/layouts/jplayer_newfields'
+      = render :partial => 'layouts/contact'
+      = render :partial => 'layouts/mailing_list'
+    .section
+      %h2 Next Show
+      %h2 Last Show
+      %h2 Newest Video
+      %h2 Newest Photo
