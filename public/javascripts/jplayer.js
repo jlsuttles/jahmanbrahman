@@ -127,58 +127,12 @@
         {
           name:"Tempered Song",
           mp3:"http://www.happyworm.com/audio/mp3/Miaow-01-Tempered-song.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-01-Tempered-song.ogg"
-        },
-        {
-          name:"Hidden",
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-02-Hidden.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-02-Hidden.ogg"
         },
         {
           name:"Lentement",
           free:true,
           mp3:"http://www.happyworm.com/audio/mp3/Miaow-03-Lentement.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-03-Lentement.ogg"
-        },
-        {
-          name:"Lismore",
-          free:true,
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-04-Lismore.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-04-Lismore.ogg"
-        },
-        {
-          name:"The Separation",
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-05-The-separation.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-05-The-separation.ogg"
-        },
-        {
-          name:"Beside Me",
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-06-Beside-me.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-06-Beside-me.ogg"
-        },
-        {
-          name:"Bubble",
-          free:true,
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-07-Bubble.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-07-Bubble.ogg"
-        },
-        {
-          name:"Stirring of a Fool",
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-08-Stirring-of-a-fool.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-08-Stirring-of-a-fool.ogg"
-        },
-        {
-          name:"Partir",
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-09-Partir.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-09-Partir.ogg"
-        },
-        {
-          name:"Thin Ice",
-          free:true,
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-10-Thin-ice.mp3",
-          oga:"http://www.happyworm.com/audio/ogg/Miaow-10-Thin-ice.ogg"
         }
-
       ], {
         ready: function() {
           audioPlaylist.displayPlaylist();
@@ -190,7 +144,7 @@
         play: function() {
           $(this).jPlayer("pauseOthers");
         },
-        supplied: "oga, mp3"
+        supplied: "mp3"
       });
 
     });   
@@ -202,7 +156,7 @@
       volume: 0.8,
       muted: false,
       backgroundColor: '#000000',
-      cssSelectorAncestor: '.jp_interface',
+      cssSelectorAncestor: '.jp-interface',
       cssSelector: {
         videoPlay: '.jp-video-play',
         play: '.jp-play',
@@ -221,7 +175,7 @@
       warningAlerts: false,
     });
 
-	});	
+		
 
 })(jQuery);
 

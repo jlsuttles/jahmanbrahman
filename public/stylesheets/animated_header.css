@@ -1,0 +1,106 @@
+#colors,
+#mountains,
+#mountains-top, 
+#mountains-middle, 
+#mountains-bottom {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#colors {
+  position: relative;
+  background-color: purple;
+}
+
+#mountains img {
+  position: absolute;
+  left: 50%;
+  margin-left: -720px;
+  height: 500px;
+  width: 1440px;
+  opacity: 0.5;
+}
+
+#mountains-top {
+  background-image: url('/images/mountains-top-smaller.png');
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+
+#mountains-bottom {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  opacity: 1;
+}
+
+#mountains-middle {
+  height: 400px;
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
+}
+
+#colors #band,
+#colors #crowd{
+  height: 400px;
+  width: 960px;
+  overflow: hidden;
+  position: absolute;
+}
+
+#colors #band img,
+#colors #crowd img{
+  position: absolute;
+  opacity: 0.8;
+}
+
+#band .nate img {
+  top: 115px;
+  left: 50%;
+  margin-left: -178px;
+  width: 90px;
+  z-index: 999;
+}
+
+#band .casey img {
+  top: 185px;
+  left: 50%;
+  margin-left: -105px;
+  width: 90px;
+  z-index: 999;
+}
+
+#band .rowdy img {
+  top: 65px;
+  left: 50%;
+  margin-left: -100px;
+  width: 190px;
+  z-index: 999;
+}
+
+#band .justin img {
+  top: 190px;
+  left: 50%;
+  margin-left: -10px;
+  width: 100px;
+  z-index: 999;
+}
+
+#band .josh img {
+  top: 112px;
+  left: 50%;
+  margin-left: 90px;
+  width: 130px;
+  z-index: 999;
+}
+
+#crowd {
+  overflow: hidden;
+}
+
+#crowd img {
+  height: 70%;
+  top: 230px;
+  left: 75px;
+}
