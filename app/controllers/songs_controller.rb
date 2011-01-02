@@ -2,8 +2,15 @@ class SongsController < ApplicationController
 
   before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
 
+  layout 'shadowbox'
+
   def index
     @songs = Song.all
+
+    respond_to do |fmt|
+      fmt.html{render :layout => 'application'}      
+      fmt.js
+    end
   end
 
   def show
