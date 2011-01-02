@@ -16,15 +16,23 @@
           = link_to 'Edit', edit_news_story_path(news_story), :class => :edit, :rel => :shadowbox
           = link_to 'Delete', news_story, :class => :delete, :confirm => "Are you sure you want to delete #{news_story.title}?", :method => :delete
 
-  .section.right_one_third
+  .section.right_one_third{:style => "text-align:right"}
     %h2 
       %i Newfields
     %h3 Available in iTunes Store
     = image_tag '/images/newfields_album_cover.jpg', :width => '310px'
     = render :partial => '/layouts/jplayer_newfields'
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br
     = render :partial => 'layouts/contact'
+    %br
     = render :partial => 'layouts/mailing_list'
-    %h2 Next Show
-    %h2 Last Show
-    %h2 Newest Video
-    %h2 Newest Photo
+    %br
+    %h3 Next Show
+    %h3 Last Show
+    %h3 Newest Video
+    %h3 Newest Photo
