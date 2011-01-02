@@ -1,0 +1,42 @@
+body {
+  left: 50%;
+  margin-left: -240px;
+  position: relative;
+  width: 480px;
+  text-align: center;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+label {
+  display: none;
+}
+
+input {
+  margin: 10px;
+  width: 460px;
+  font-size: 20pt;
+	font-variant: small-caps;
+	text-transform: lowercase;
+
+}
+
+textarea {
+  margin: 10px;
+  width: 460px;
+  height: 280px;
+  font-size: 12pt;
+}
+
+input.submit {
+  clear: both;
+  width: 100px;
+  text-transform: none;
+}
+
+a.cancel {
+  clear: both;
+}

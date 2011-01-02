@@ -3,15 +3,17 @@ class NewsStoriesController < ApplicationController
   before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
 
   def index
-    @news_stories = NewsStory.all
+    redirect_to root_path
   end
 
+  layout 'shadowbox'
+  
   def show
     @news_story = NewsStory.find(params[:id])
   end
 
   def new
-    @news_story = NewsStory.new
+    @news_story = NewsStory.new(:title => "Title", :description => "Description")
   end
 
   def edit

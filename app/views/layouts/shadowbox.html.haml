@@ -1,0 +1,22 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %title
+      Jahman Brahman - 
+      = yield(:title) || "Untitled"
+    = javascript_include_tag  'jquery.js'
+    = javascript_include_tag  'application'
+    = stylesheet_link_tag     'application'
+    = stylesheet_link_tag     'shadowbox_page'
+    = yield(:head)
+  %body{:class => body_classes}
+
+    - if flash[:notice]
+      .notice= flash[:notice]
+    - if flash[:error]
+      .error= flash[:error]
+  
+    %h1= yield(:title) if show_title?
+
+    = yield
