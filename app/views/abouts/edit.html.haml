@@ -1,11 +1,9 @@
 - @active_tab = :about
-- title "Edit #{h @about.title}", true
-
-%h2 Current description:
-%p= h @about.description
+- title "Edit About", true
 
 - form_for(@about) do |f|
   = f.error_messages
   = render :partial => 'form', :object => f
-  = f.submit 'Save Changes', :class => 'submit'
-  = link_to 'Cancel', abouts_path, :class => 'cancel'
+  = f.submit 'Save Changes', :class => :submit
+  %a{:href => '', :class => :cancel, :onclick => "parent.Shadowbox.close();"}
+    = "Cancel"

@@ -2,16 +2,19 @@ class AboutsController < ApplicationController
 
   before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
 
+  layout 'shadowbox'
+
   def index
     @abouts = About.all
+    render :layout => 'application'
   end
-
+  
   def show
     @about = About.find(params[:id])
   end
 
   def new
-    @about = About.new
+    @about = About.new(:title => "Title", :description => "Description")
   end
 
   def edit

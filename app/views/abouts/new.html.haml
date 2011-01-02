@@ -5,4 +5,5 @@
   = f.error_messages
   = render :partial => 'form', :object => f
   = f.submit 'Create', :class => 'submit'
-  = link_to 'Cancel', abouts_path, :class => 'cancel'
+  %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
+    = "Cancel"

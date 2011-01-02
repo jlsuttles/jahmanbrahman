@@ -2,9 +2,12 @@ class ShowsController < ApplicationController
 
   before_filter :require_admin, :only => [:show,:new,:edit,:create,:update,:destroy]
 
+  layout 'shadowbox'
+
   def index
     @future_shows = Show.past.all
     @past_shows = Show.future.all
+    render :layout => 'application'
   end
 
   def show
@@ -12,7 +15,7 @@ class ShowsController < ApplicationController
   end
 
   def new
-    @show = Show.new
+    @show = Show.new(:name => "Name", :ages => "Ages", :note => "Note")
   end
 
   def edit

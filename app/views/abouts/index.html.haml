@@ -8,17 +8,17 @@
 #main_content
 
   - if current_user.try :admin?
-    = link_to 'New', new_about_path, :class => 'new'
+    = link_to 'New', new_about_path, :class => :new, :rel => :shadowbox
 
   - @abouts.each_with_index do |about, index|
+    %h2.clear= h about.title
     %ul{ :id => "about_carousel_#{index}", :class => "jcarousel-skin-classy" }
-      %li= link_to image_tag('/images/band01.jpg'), '/images/band01.jpg', :rel => 'shadowbox[JB]', :class => "band_thumb", :title => :Title
+      %li= link_to image_tag('/images/band01.jpg'), '/images/band01.jpg', :rel => "shadowbox[about_#{index}]", :class => "band_thumb", :title => :Title
     
     .section.left_two_thirds
-      %h2= h about.title
       %p= about.description
       - if current_user.try :admin?
-        = link_to 'Edit', edit_about_path(about), :class => 'edit'
-        = link_to 'Delete', about, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete, :class => 'delete'
+        = link_to 'Edit', edit_about_path(about), :class => :edit, :rel => :shadowbox
+        = link_to 'Delete', about, :class => :delete, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete
     .section.right_one_third
-      %h2= h about.title + " Links"
+      %h2 Links

@@ -1,9 +1,9 @@
 - @active_tab = :shows
 - title 'New Show', true
 
-#main_content
-  - form_for(@show) do |f|
-    = f.error_messages
-    = render :partial => 'form', :object => f
-    = f.submit 'Create', :class => 'submit'
-    = link_to 'Cancel', shows_path, :class => 'cancel'
+- form_for(@show) do |f|
+  = f.error_messages
+  = render :partial => 'form', :object => f
+  = f.submit 'Create', :class => 'submit'
+  %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
+    = "Cancel"

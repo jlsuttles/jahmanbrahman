@@ -189,9 +189,15 @@ img.logo {
   text-align: right;
 }
 
-.social_networks img {
+.fb_like_no_faces img {
+  float: right;
   width: 30px;
   height: 30px;
+}
+
+.fb_like_no_faces iframe {
+float: right;
+padding-top: 5px;
 }
 
 .contact {
