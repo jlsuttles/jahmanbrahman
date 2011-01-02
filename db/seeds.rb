@@ -7,10 +7,10 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 
 User.create({
-  :email    => "jlsuttles@gmail.com",
+  :email    => "jahmanbrahman@gmail.com",
   :login    => "admin",
-  :password => "Password1",
-  :password_confirmation => "Password1",
+  :password => "password",
+  :password_confirmation => "password",
   :role     => "admin",
 })
 
@@ -48,8 +48,8 @@ NewsStory.create([
   ])
 
 Venue.create([
-  { :name => 'Venue1' },
-  { :name => 'Venue2' }
+  { :name => 'Venue1', :address_attributes => {:line1 => '19 Wavecrest Ave.', :city => 'Venice', :state => 'CA', :zip => '90291'} },
+  { :name => 'Venue2', :address_attributes => {:line1 => '19 Wavecrest Ave.', :city => 'Venice', :state => 'CA', :zip => '90291'} }
   ])
 
 Band.create([

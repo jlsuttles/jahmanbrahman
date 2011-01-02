@@ -3,5 +3,7 @@ class Venue < ActiveRecord::Base
 
     has_one   :address
     has_many  :shows
+
+    accepts_nested_attributes_for :address
 end
 
