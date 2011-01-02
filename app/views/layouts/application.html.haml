@@ -5,9 +5,11 @@
     %title
       Jahman Brahman - 
       = yield(:title) || "Untitled"
-    = javascript_include_tag  'jquery.js'
-    = javascript_include_tag  'application'
-    = stylesheet_link_tag     'application'
+    = javascript_include_tag  'jquery.js', 'application'
+    = javascript_include_tag  'jquery.jcarousel.min', 'jcarousel'
+    = javascript_include_tag  'js.shadowbox', 'shadowbox'
+    = stylesheet_link_tag     'application', 'jcarousel', 'shadowbox'
+    
     = yield(:head)
   %body{:class => body_classes}
   
