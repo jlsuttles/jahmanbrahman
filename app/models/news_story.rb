@@ -11,6 +11,7 @@ class NewsStory < ActiveRecord::Base
   # has_many :videos, :through => :news_story_videos
   # has_many :news_story_videos, :dependent => :destroy
 
-  accepts_nested_attributes_for :links, :photos#, :videos
+  accepts_nested_attributes_for :links, :reject_if => lambda { |l| l.values.all?(&:blank?) } 
+  accepts_nested_attributes_for :photos#, :videos
 
 end

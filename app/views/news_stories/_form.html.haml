@@ -6,6 +6,8 @@
 
 #links_form
   - form.fields_for :links, :child_index => "" do |link|
-    .link_form
+    .link_form{:style => "display:none"}
       = render :partial => 'links/form', :object => link
+
 = link_to_function "Add Link", "$('#links_form').append($('.link_form:first-child').clone().show());"
+
