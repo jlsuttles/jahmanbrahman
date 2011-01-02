@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  news_story_id: 1
+  photo_id: 1
+
+two:
+  news_story_id: 1
+  photo_id: 1

@@ -1,0 +1,9 @@
+window.playListData = [
+  <% @songs.each do |song| %>
+    {
+      name:<%=song.name%>,
+      mp3:"http://www.happyworm.com/audio/mp3/Miaow-01-Tempered-song.mp3",
+      oga:"http://www.happyworm.com/audio/ogg/Miaow-01-Tempered-song.ogg"
+    }
+  <% end %>
+]
