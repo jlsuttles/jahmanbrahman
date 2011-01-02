@@ -16,7 +16,7 @@ class Show < ActiveRecord::Base
     # has_many    :videos, :through => :show_videos
     # has_many    :show_videos, :dependent => :destroy
 
-    named_scope :future, :conditions => ["datetime <= ?", Time.now]
-    named_scope :past, :conditions => ["datetime >= ?", Time.now]
+    named_scope :future, :conditions => ["datetime <= ?", Time.now], :order => "datetime DESC"
+    named_scope :past, :conditions => ["datetime >= ?", Time.now], :order => "datetime DESC"
 
 end
