@@ -13,7 +13,7 @@ class NewsStoriesController < ApplicationController
   end
 
   def new
-    @news_story = NewsStory.new(:title => "Title", :description => "Description")
+    @news_story = NewsStory.new
   end
 
   def edit

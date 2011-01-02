@@ -1,15 +1,15 @@
 = form.label :name
-= form.text_field :name
+= form.text_field :name, :placeholder => "Name"
 
 = form.label :datetime
 = form.datetime_select :datetime
 
 = form.label :ages
-= form.text_field :ages
+= form.text_field :ages, :placeholder => "Ages"
 
 = form.label :venue_id
 = form.select :venue_id, options_from_collection_for_select(Venue.all, :id, :name)
 
 = form.label :note
-= form.text_field :note
+= form.text_field :note, :placeholder => "Notes"
 

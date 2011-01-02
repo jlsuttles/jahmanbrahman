@@ -11,8 +11,10 @@
   .section.right_one_third
     = render :partial => '/layouts/jplayer_newfields'
 
+  .clear
+
   - if current_user.try :admin?
-    = link_to 'New', new_song_path
+    = link_to 'New', new_song_path, :class => :new, :rel => :shadowbox
 
   - @songs.each do |song|
     .section

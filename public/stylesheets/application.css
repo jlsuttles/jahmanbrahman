@@ -206,8 +206,13 @@ padding-top: 5px;
 }
 
 .contact {
+  font-size: 14pt;
 	font-variant: small-caps;
 	text-transform: lowercase;
+}
+
+ul.contact li {
+  list-style: none
 }
 
 #footer .copy_right {

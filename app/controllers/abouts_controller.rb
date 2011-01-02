@@ -14,7 +14,7 @@ class AboutsController < ApplicationController
   end
 
   def new
-    @about = About.new(:title => "Title", :description => "Description")
+    @about = About.new
   end
 
   def edit

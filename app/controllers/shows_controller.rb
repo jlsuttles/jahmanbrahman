@@ -15,7 +15,7 @@ class ShowsController < ApplicationController
   end
 
   def new
-    @show = Show.new(:name => "Name", :ages => "Ages", :note => "Note")
+    @show = Show.new
   end
 
   def edit
