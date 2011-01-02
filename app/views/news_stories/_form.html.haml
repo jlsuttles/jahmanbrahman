@@ -3,3 +3,9 @@
 
 = form.label :description
 = form.text_area :description, :placeholder => "Description"
+
+#links_form
+  - form.fields_for :links, :child_index => "" do |link|
+    .link_form
+      = render :partial => 'links/form', :object => link
+= link_to_function "Add Link", "$('#links_form').append($('.link_form:first-child').clone().show());"

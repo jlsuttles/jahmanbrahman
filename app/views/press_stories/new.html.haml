@@ -1,8 +1,0 @@
-- @active_tab = :press
-- title 'New Press Story', true
-
-- form_for(@press_story) do |f|
-  = f.error_messages
-  = render :partial => 'form', :object => f
-  = f.submit 'Create', :class => 'submit'
-  = link_to 'Cancel', press_stories_path, :class => 'cancel'

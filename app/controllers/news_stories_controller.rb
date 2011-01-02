@@ -14,6 +14,8 @@ class NewsStoriesController < ApplicationController
 
   def new
     @news_story = NewsStory.new
+    @news_story.links.build
+    @news_story.photos.build
   end
 
   def edit

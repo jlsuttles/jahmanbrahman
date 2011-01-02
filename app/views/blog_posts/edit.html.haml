@@ -1,8 +1,0 @@
-- @active_tab = :blog
-- title "Edit #{h @blog_post.title}"
-  
-- form_for(@blog_post) do |f|
-  = f.error_messages
-  = render :partial => 'form', :object => f
-  = f.submit 'Save Changes', :class => 'submit'
-  = link_to 'Cancel', blog_posts_path, :class => 'cancel'

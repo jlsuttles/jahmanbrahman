@@ -1,7 +1,5 @@
-- @active_tab = :contact
 - title "#{h @contact_information.title}", true
 
 %p= h @contact_information.description
 
 = link_to 'Edit', edit_contact_information_path(@contact_information), :class => 'edit'
-= link_to 'Back', contact_informations_path, :class => 'back'
