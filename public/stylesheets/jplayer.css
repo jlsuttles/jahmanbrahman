@@ -26,6 +26,7 @@
 	color: #666;
   text-align: left;
 	width:310px;
+  height:250px;
 }
 
 .jp-interface {
@@ -163,7 +164,7 @@ a.jp-next:hover {
 
 /* The seeking class is added/removed inside jPlayer */
 .jp-seeking-bg {
-	background: url("pbar-ani.gif");
+	background: url("/images/pbar-ani.gif");
 }
 
 a.jp-mute,

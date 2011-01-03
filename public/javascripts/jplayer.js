@@ -123,20 +123,10 @@
         }
       };
     
-    var audioPlaylist = new Playlist("1", [
-        {
-          name:"Tempered Song",
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-01-Tempered-song.mp3",
-        },
-        {
-          name:"Lentement",
-          free:true,
-          mp3:"http://www.happyworm.com/audio/mp3/Miaow-03-Lentement.mp3",
-        }
-      ], {
+    var audioPlaylist = new Playlist("1", window.playListData, {
         ready: function() {
           audioPlaylist.displayPlaylist();
-          audioPlaylist.playlistInit(false); // Parameter is a boolean for autoplay.
+          audioPlaylist.playlistInit(true); // Parameter is a boolean for autoplay.
         },
         ended: function() {
           audioPlaylist.playlistNext();
@@ -171,8 +161,8 @@
         currentTime: '.jp-current-time',
         duration: '.jp-duration'
       },
-      errorAlerts: false,
-      warningAlerts: false,
+      errorAlerts: true,
+      warningAlerts: true,
     });
 
 		

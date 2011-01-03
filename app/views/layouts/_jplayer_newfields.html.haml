@@ -1,11 +1,12 @@
+- javascript '/songs.js'
 - javascript 'jquery.jplayer.min', 'jplayer'
 - stylesheet 'jplayer'
 
-#jplayer
+#jquery_jplayer_1
 
 .jp-audio
   .jp-type-playlist
-    .jp-interface
+    #jp_interface_1.jp-interface
       %ul.jp-controls
         %li
           %a.jp-play play
@@ -29,27 +30,10 @@
         .jp-current-time
         .jp-duration
 
-      .jp-playlist
+      #jp_playlist_1.jp-playlist
         %ul
-          %li
-            %a.jp_playlist_1_item1 Mountain Top
-          %li 
-            %a.jp_playlist_1_item2 Potion for E-Motion
-          %li 
-            %a.jp_playlist_1_item3 Life (Give and Take)
-          %li 
-            %a.jp_playlist_1_item4 Orange Station Loop
-          %li 
-            %a.jp_playlist_1_item5 Working Design
-          %li
-            %a.jp_playlist_1_item1 Mountain Top
-          %li 
-            %a.jp_playlist_1_item2 Potion for E-Motion
-          %li 
-            %a.jp_playlist_1_item3 Life (Give and Take)
-          %li 
-            %a.jp_playlist_1_item4 Orange Station Loop
-          %li 
-            %a.jp_playlist_1_item5 Working Design
-
+          - @songs.each_with_index do |song, index|
+            %li
+              %a{:class => "jp_playlist_1_item_#{index}"}
+                = song.title
 .clear
