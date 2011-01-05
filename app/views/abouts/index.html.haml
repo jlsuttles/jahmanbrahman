@@ -7,14 +7,21 @@
     = link_to 'New', new_about_path, :class => :new, :rel => :shadowbox
 
   - @abouts.each_with_index do |about, index|
-    %h2.clear= h about.title
-    %ul{ :id => "about_carousel_#{index}", :class => "jcarousel-skin-classy" }
-      %li= link_to image_tag('/images/band01.jpg'), '/images/band01.jpg', :rel => "shadowbox[about_#{index}]", :class => "band_thumb", :title => :Title
+
+    .section.three_thirds
+      %ul{ :id => "about_carousel_#{index}", :class => "jcarousel-skin-classy" }
+        - 10.times do
+          %li= link_to image_tag('/images/band01.jpg'), '/images/band01.jpg', :rel => "shadowbox[about_#{index}]", :class => "band_thumb", :title => :Title
     
     .section.left_two_thirds
       %p= about.description
       - if current_user.try :admin?
         = link_to 'Edit', edit_about_path(about), :class => :edit, :rel => :shadowbox
         = link_to 'Delete', about, :class => :delete, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete
+
     .section.right_one_third
       %h2 Links
+      %ul
+        %li= link_to "Some site", '/'
+        %li= link_to 'Some other site [somesite.com]', '/'
+        %li= link_to "Twitter [twitter.com]", '/'        
