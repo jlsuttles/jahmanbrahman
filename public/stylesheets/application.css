@@ -14,7 +14,8 @@ body, p, ol, ul, td {
 }
 
 p {
-  text-indent: 1.5em;
+  margin: 15px 0;
+  text-indent: 1em;
 }
 
 a { color: #666; }
@@ -29,22 +30,26 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 30pt;
-	line-height: 30pt;
+	line-height: 35pt;
 }
 
 h2 {
 	font-size: 20pt;
-	line-height: 20pt;
+	line-height: 25pt;
 }
 
 h3 {
 	font-size: 15pt;
-	line-height: 15pt;
+	line-height: 25pt;
 }
 .fieldWithErrors {
   padding: 1px;
   background-color: red;
   display: table;
+}
+
+img {
+  padding: 10px 0;
 }
 
 #errorExplanation {
@@ -97,30 +102,32 @@ label{
 	clear: both;
 }
 
-#main_navigation {
+ul#navigation {
   width: 960px;
-  margin: 25px auto;
+  margin: 10px auto 0;
 }
 
-img.logo {
-  width: 150px;
-  position: absolute;
-  left: 50%;
-  margin-left: -425px;
+ul#navigation li a.first {
+  background: url("/images/logo.png") no-repeat;
+  text-indent: -9999px;
 }
 
-#main_navigation ul li {
+ul#navigation li {
 	float: left;
 	list-style: none;
-	width: 175px;
+	width: 190px;
+  position: relative;
   text-align: center;
 }
 
-#main_navigation ul li a {
+ul#navigation li a.item {
+  padding: 10px 0;
+  display:block;
   text-decoration: none;
 	text-transform: lowercase;
-  font-size: 18pt;
+  font-size: 20pt;
   font-variant: small-caps;
+  line-height: 30pt;
 }
 
 #main_content{
@@ -130,7 +137,7 @@ img.logo {
 }
 
 .section {
-  padding: 20px 0 20px 0;
+  margin: 0 0 30px 0;
 }
 
 .section.left_two_thirds {
@@ -189,19 +196,12 @@ img.logo {
 }
 
 .fb_like_no_faces img {
-  float: right;
+  position: absolute;
+  top: 5px;
+  right: 0;
   width: 30px;
   height: 30px;
-}
-
-.social_networks img {
-  width: 30px;
-  height: 30px;
-}
-
-.fb_like_no_faces iframe {
-float: right;
-padding-top: 5px;
+  padding: 0;
 }
 
 .contact {

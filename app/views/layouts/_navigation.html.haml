@@ -1,8 +1,7 @@
-#main_navigation
-  %ul
-    %li= link_to 'Home',    root_path,    :class => active_when(:home)
-    %li= link_to 'About',   about_us_path,:class => active_when(:about)
-    %li= link_to 'Music',   music_path,   :class => active_when(:music)
-    %li= link_to 'Shows',   shows_path,   :class => active_when(:shows)
-    %li= render :partial => 'layouts/fb_like_no_faces'
-  .clear
+%ul#navigation
+  %li= link_to 'Home',    root_path,    :class => "first item #{active_when(:home)}"
+  %li= link_to 'About',   about_us_path,:class => "item #{active_when(:about)}"
+  %li= link_to 'Music',   music_path,   :class => "item #{active_when(:music)}"
+  %li= link_to 'Shows',   shows_path,   :class => "item #{active_when(:shows)}"
+  %li= render :partial => 'layouts/fb_like_no_faces'
+.clear
