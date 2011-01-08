@@ -1,7 +1,7 @@
 *{ margin:0; padding:0; }
 
 body { 
-	background-color: #000; 
+  background-color: #111;
   color: #999;
   height: 100%; /* does anything? */
   width: 100%;
@@ -18,14 +18,17 @@ p {
   text-indent: 1em;
 }
 
+a { font-family: "Arial Rounded MT Bold"; }
 a { color: #666; }
 a:visited { color: #666; }
 a:hover { color: #fff; }
 
 h1, h2, h3 {
 	color: #333;
+  font-family: "Arial Rounded MT Bold";
 	font-variant: small-caps;
 	text-transform: lowercase;
+  text-align: left;
 }
 
 h1 {
@@ -34,8 +37,8 @@ h1 {
 }
 
 h2 {
-	font-size: 20pt;
-	line-height: 25pt;
+	font-size: 25pt;
+	line-height: 30pt;
 }
 
 h3 {
@@ -126,7 +129,12 @@ ul#navigation li a.item {
   line-height: 30pt;
 }
 
+#container {
+  background: #000;
+}
+
 #main_content{
+  background-color: #000;
   margin: 0 auto;
   top: 450px;
   width: 960px;
@@ -148,7 +156,7 @@ ul#navigation li a.item {
 
 .section.right_one_third {
   float: right;
-  width: 300px;
+  width: 299px;
   padding-left:20px;
   text-align: right;
 }
@@ -173,9 +181,8 @@ ul#navigation li a.item {
 #footer {
   clear: both;
   background-color: #111;
-  min-height: 150px;
-  margin: 100px 0 0 0;
-  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
+  padding: 0;
 }
 
 #footer_container {
@@ -223,7 +230,51 @@ ul.contact li {
 
 #footer .copy_right {
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   font-size: 10pt;
   line-height: 11pt;
+}
+
+.home #main_content .mailing_list {
+  padding: 0 0 30px;
+  border-bottom: 1px solid #222;
+}
+
+.home #main_content .mailing_list input {
+  font-size: 1em;
+  margin: 10px 30px;
+}
+
+.home #main_content .mailing_list input.email {
+  background: #000;
+  color: #aaa;
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #222;
+}
+
+.tour_dates {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.tour_dates table {
+  margin: 10px 0;
+}
+
+.tour_dates table tr td {
+  text-align: left;
+  border-bottom: 1px dotted #222;
+}
+
+.tour_dates table tr {
+}
+
+.tour_dates table tr.grey {
+  color: #666;
+}
+
+.home #main_content .section.right_one_third {
+  border-left: 1px dotted #222;
+  text-align: right;
 }

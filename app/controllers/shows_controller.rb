@@ -5,8 +5,8 @@ class ShowsController < ApplicationController
   layout 'shadowbox'
 
   def index
-    @future_shows = Show.past.all
-    @past_shows = Show.future.all
+    @future_shows = Show.future.all
+    @past_shows = Show.past.all
     render :layout => 'application'
   end
 

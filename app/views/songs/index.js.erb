@@ -1,8 +1,8 @@
 window.playListData = [
   <% @songs.each do |song| %>
     {
-      name:"<%=song.title%>",
-      mp3: "<%=song.mp3.path%>",
+      title:"<%=song.title%>",
+      url: "http://jahmanbrahman.com/file.mp3",
     },
   <% end %>
 ]

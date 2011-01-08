@@ -1,0 +1,49 @@
+.section.tour_dates
+  %h2 Tour Dates
+  %table{:width => "100%"}
+    - @future_shows.each do |show|
+      %tr
+        %td
+          =show.datetime.strftime("%m/%d/%y")
+          %br
+          =show.datetime.strftime("%I:%M %p")
+        %td
+          =show.venue.name
+          %br
+          =show.venue.address.city
+          ,
+          =show.venue.address.state
+        %td
+          =show.ages
+          %br
+          $5
+      %tr.grey
+        %td
+          =show.datetime.strftime("%m/%d/%y")
+          %br
+          =show.datetime.strftime("%I:%M %p")
+        %td
+          =show.venue.name
+          %br
+          =show.venue.address.city
+          ,
+          =show.venue.address.state
+        %td
+          =show.ages
+          %br
+          $5
+      %tr
+        %td
+          =show.datetime.strftime("%m/%d/%y")
+          %br
+          =show.datetime.strftime("%I:%M %p")
+        %td
+          =show.venue.name
+          %br
+          =show.venue.address.city
+          ,
+          =show.venue.address.state
+        %td
+          =show.ages
+          %br
+          $5
