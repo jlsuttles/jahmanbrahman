@@ -1,4 +1,5 @@
-%ul.contact
-  %h3 Contact Information
-  - @contact_informations.each do |contact_information|
-    %li= h contact_information.description
+.section.contact
+  %h2 Contact
+  %ul
+    - @contact_informations.each do |contact_information|
+      %li= h contact_information.description

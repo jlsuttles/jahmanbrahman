@@ -13,15 +13,17 @@
         - 10.times do
           %li= link_to image_tag('/images/band01.jpg'), '/images/band01.jpg', :rel => "shadowbox[about_#{index}]", :class => "band_thumb", :title => :Title
     
-    .section.left_two_thirds
+    .section.two_thirds.float_left
       %p= about.description
       - if current_user.try :admin?
         = link_to 'Edit', edit_about_path(about), :class => :edit, :rel => :shadowbox
         = link_to 'Delete', about, :class => :delete, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete
 
-    .section.right_one_third
+    .section.one_third.float_right.text_right
       %h2 Links
       %ul
         %li= link_to "Some site", '/'
         %li= link_to 'Some other site [somesite.com]', '/'
         %li= link_to "Twitter [twitter.com]", '/'        
+
+    .clear

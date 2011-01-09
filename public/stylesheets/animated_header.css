@@ -30,7 +30,9 @@
 }
 
 #mountains-bottom {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  background: transparent; /* for non-css3 browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  transparent,  #000); /* for firefox 3.6+ */  
   opacity: 1;
 }
 

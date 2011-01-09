@@ -1,15 +1,10 @@
 #footer_container
-  .left
-    = render :partial => 'layouts/contact'
+  = render :partial => 'layouts/contact'
+  = render :partial => 'layouts/fb_like_with_faces'
+  = render :partial => 'layouts/mailing_list'
 
-  .center
-    = render :partial => 'layouts/fb_like_with_faces'
-
-  .right
-    = render :partial => 'layouts/mailing_list'
-
-.copy_right.clear
-  ©2011 JahmanBrahman.com
-  %br
-  Web Site by 
-  = link_to "Jessica Lynn Suttles", "http://jlsuttles.com"
+  .section.copy_right.clear
+    ©2011 JahmanBrahman.com
+    %br
+    Web Site by 
+    = link_to "Jessica Lynn Suttles", "http://jlsuttles.com"
