@@ -3,7 +3,7 @@
   %table
     - @future_shows.each do |show|
       %tr
-        %td
+        %td.datetime
           =show.datetime.strftime("%m/%d/%y")
           %br
           =show.datetime.strftime("%I:%M %p")
@@ -18,7 +18,7 @@
           %br
           $5
       %tr.grey
-        %td
+        %td.datetime
           =show.datetime.strftime("%m/%d/%y")
           %br
           =show.datetime.strftime("%I:%M %p")
@@ -33,7 +33,7 @@
           %br
           $5
       %tr
-        %td
+        %td.datetime
           =show.datetime.strftime("%m/%d/%y")
           %br
           =show.datetime.strftime("%I:%M %p")

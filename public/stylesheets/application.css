@@ -165,16 +165,35 @@ ul#navigation .fb_like_no_faces iframe {
   margin: 0 20px 20px 0;
 }
 
+.home #main_content .section.two_thirds.float_left .section ul.news_story_links li {
+  padding: 0 0 0 40px;
+  list-style: none;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+.home #main_content .section.two_thirds.float_left .section ul.news_story_links li span.link a {
+  color: #999;
+}
+
+.home #main_content .section.two_thirds.float_left .section ul.news_story_links li span.url {
+  color: #333;
+}
+
+.home #main_content .section.two_thirds.float_left .section ul.news_story_links li span.description {
+  color: #666;
+}
+
 .home #main_content .section.one_third.float_right {
   border-left: 1px dotted #222;
 }
 
 .home #main_content .section.one_third.float_right .section {
   margin: 0 0 20px 20px;
+  border-bottom: 1px solid #222;
 }
 
 .home #main_content .mailing_list {
-  border-bottom: 1px solid #222;
   padding: 0 20px 10px 0;
 }
 
@@ -207,7 +226,12 @@ ul#navigation .fb_like_no_faces iframe {
 .home #main_content .tour_dates table tr td {
   text-align: left;
   padding: 5px;
-  border-bottom: 1px dotted #222;
+  border-top: 1px dotted #222;
+}
+
+.home #main_content .tour_dates table tr td.datetime {
+  font-size: .8em;
+  line-height: 1.75em;
 }
 
 #footer {
