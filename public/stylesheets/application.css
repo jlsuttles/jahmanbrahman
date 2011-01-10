@@ -204,6 +204,7 @@ ul#navigation .fb_like_no_faces iframe {
   margin: 0 20px 20px 0;
 }
 
+.abouts #main_content .section.one_third.float_right ul li,
 .home #main_content .section.two_thirds.float_left .section ul.news_story_links li {
   padding: 0 0 0 40px;
   list-style: none;
@@ -211,15 +212,18 @@ ul#navigation .fb_like_no_faces iframe {
   text-transform: lowercase;
 }
 
-.home #main_content .section.two_thirds.float_left .section ul.news_story_links li span.link a {
+.abouts #main_content .section.one_third.float_right ul li a,
+.home #main_content .section.two_thirds.float_left .section ul.news_story_links li a {
   color: #999;
 }
 
+.abouts #main_content .section.one_third.float_right ul li span.url,
 .home #main_content .section.two_thirds.float_left .section ul.news_story_links li span.url {
   color: #333;
   font-style: italic;
 }
 
+.abouts #main_content .section.one_third.float_right ul li span.description,
 .home #main_content .section.two_thirds.float_left .section ul.news_story_links li span.description {
   color: #666;
   font-style: italic;

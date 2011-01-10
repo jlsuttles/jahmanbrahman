@@ -2,7 +2,7 @@
   %h2.text_left Tour Dates
   %table
     - @future_shows.each_with_index do |show, index|
-      %tr{:class => "#{index%2==1 ? :grey : nil}"}
+      %tr{:class => "#{ index.odd? ? :grey : nil }"}
         %td.datetime
           =show.datetime.strftime("%m/%d/%y")
           %br

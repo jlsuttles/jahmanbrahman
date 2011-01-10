@@ -11,19 +11,6 @@ h1 {
   text-align: center;
 }
 
-input {
-  margin: 10px;
-  width: 460px;
-  font-size: 1em;
-}
-
-textarea {
-  margin: 10px;
-  width: 460px;
-  height: 280px;
-  font-size: 12pt;
-}
-
 input.submit {
   clear: both;
   width: 100px;
@@ -33,6 +20,7 @@ table {
   width: 100%;
 }
 
+textarea,
 input {
   font-size: 1em;
   margin: 5px 0;
@@ -43,6 +31,7 @@ label {
   text-transform: lowercase;
 }
 
+textarea,
 input.text_field {
   background: #111;
   border: 1px solid #222;

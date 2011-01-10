@@ -1,5 +1,8 @@
-= form.label :title
-= form.text_field :title, :placeholder => "Title"
-
-= form.label :description
-= form.text_area :description, :placeholder => "Description"
+%tr
+  %td
+    %h3= form.label :title
+  %td= form.text_field :title, :class => :text_field
+%tr
+  %td
+    %h3= form.label :description
+  %td= form.text_area :description, :class => :text_field

@@ -2,7 +2,14 @@
 
 - form_for(@about) do |f|
   = f.error_messages
-  = render :partial => 'form', :object => f
-  = f.submit 'Create', :class => 'submit'
-  %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
-    = "Cancel"
+
+  %table
+  
+    = render :partial => 'form', :object => f
+      
+    %tr
+      %td &nbsp;
+      %td
+        = f.submit 'Create', :class => 'submit'
+        %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
+          = "Cancel"
