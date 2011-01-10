@@ -1,6 +1,7 @@
 class Show < ActiveRecord::Base
 
     validates_presence_of :datetime, :venue#, :ages, :note, TODO :price
+    validates_numericality_of :price, :allow_nil => true
     
     belongs_to  :venue
 
@@ -16,7 +17,7 @@ class Show < ActiveRecord::Base
     # has_many    :videos, :through => :show_videos
     # has_many    :show_videos, :dependent => :destroy
 
-    named_scope :future, :conditions => ["datetime >= ?", Time.now], :order => "datetime DESC"
-    named_scope :past, :conditions => ["datetime <= ?", Time.now], :order => "datetime DESC"
+    named_scope :future, :conditions => ["datetime >= ?", Time.now], :order => "datetime ASC"
+    named_scope :past, :conditions => ["datetime <= ?", Time.now], :order => "datetime ASC"
 
 end

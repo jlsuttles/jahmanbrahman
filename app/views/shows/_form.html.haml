@@ -1,15 +1,25 @@
-= form.label :name
-= form.text_field :name, :placeholder => "Name"
-
-= form.label :datetime
-= form.datetime_select :datetime
-
-= form.label :ages
-= form.text_field :ages, :placeholder => "Ages"
-
-= form.label :venue_id
-= form.select :venue_id, options_from_collection_for_select(Venue.all, :id, :name)
-
-= form.label :note
-= form.text_field :note, :placeholder => "Notes"
+%tr
+  %td
+    %h3= form.label :name
+  %td= form.text_field :name, :class => :text_field
+%tr
+  %td
+    %h3= form.label :venue_id
+  %td= form.select :venue_id, options_from_collection_for_select(Venue.all, :id, :name)
+%tr
+  %td
+    %h3= form.label :datetime, "Date&#8212;Time"
+  %td= form.datetime_select :datetime, :order => [:month, :day, :year]
+%tr
+  %td
+    %h3= form.label :price
+  %td= form.text_field :price, :class => :text_field
+%tr
+  %td
+    %h3= form.label :ages
+  %td= form.text_field :ages, :class => :text_field
+%tr
+  %td
+    %h3= form.label :note
+  %td= form.text_field :note, :class => :text_field
 

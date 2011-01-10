@@ -11,17 +11,10 @@ h1 {
   text-align: center;
 }
 
-label {
-  display: none;
-}
-
 input {
   margin: 10px;
   width: 460px;
-  font-size: 20pt;
-	font-variant: small-caps;
-	text-transform: lowercase;
-
+  font-size: 1em;
 }
 
 textarea {
@@ -34,9 +27,26 @@ textarea {
 input.submit {
   clear: both;
   width: 100px;
-  text-transform: none;
 }
 
-a.cancel {
-  clear: both;
+table {
+  width: 100%;
+}
+
+input {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+label {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+input.text_field {
+  background: #111;
+  border: 1px solid #222;
+  color: #aaa;
+  padding: 5px;
+  width: 300px;
 }

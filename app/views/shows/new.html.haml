@@ -1,8 +1,15 @@
 - title 'New Show', true
 
-- form_for(@show) do |f|
-  = f.error_messages
-  = render :partial => 'form', :object => f
-  = f.submit 'Create', :class => 'submit'
-  %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
-    = "Cancel"
+%table
+  - form_for(@show) do |f|
+    %tr
+      %td= f.error_messages
+    
+    = render :partial => 'form', :object => f
+    
+    %tr
+      %td &nbsp;
+      %td
+        = f.submit 'Create', :class => 'submit'
+        %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
+          = "Cancel"

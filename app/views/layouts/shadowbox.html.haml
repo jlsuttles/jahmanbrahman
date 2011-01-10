@@ -13,9 +13,9 @@
   %body{:class => body_classes}
 
     - if flash[:notice]
-      .notice= flash[:notice]
+      .section.notice= flash[:notice]
     - if flash[:error]
-      .error= flash[:error]
+      .section.error= flash[:error]
   
     %h1= yield(:title) if show_title?
 

@@ -35,7 +35,6 @@ private
 
   def require_admin
     unless current_user and current_user.admin?
-      flash[:notice] = "You must be an administrator to access this page"
       redirect_to :action => 'index'
       return false
     end

@@ -1,49 +1,19 @@
 .section.tour_dates
   %h2.text_left Tour Dates
   %table
-    - @future_shows.each do |show|
-      %tr
+    - @future_shows.each_with_index do |show, index|
+      %tr{:class => "#{index%2==1 ? :grey : nil}"}
         %td.datetime
           =show.datetime.strftime("%m/%d/%y")
           %br
           =show.datetime.strftime("%I:%M %p")
         %td
-          =show.venue.name
+          = h show.venue.name
           %br
-          =show.venue.address.city
+          = h show.venue.address.city
           ,
-          =show.venue.address.state
+          = h show.venue.address.state
         %td
-          =show.ages
+          = h show.ages
           %br
-          $5
-      %tr.grey
-        %td.datetime
-          =show.datetime.strftime("%m/%d/%y")
-          %br
-          =show.datetime.strftime("%I:%M %p")
-        %td
-          =show.venue.name
-          %br
-          =show.venue.address.city
-          ,
-          =show.venue.address.state
-        %td
-          =show.ages
-          %br
-          $5
-      %tr
-        %td.datetime
-          =show.datetime.strftime("%m/%d/%y")
-          %br
-          =show.datetime.strftime("%I:%M %p")
-        %td
-          =show.venue.name
-          %br
-          =show.venue.address.city
-          ,
-          =show.venue.address.state
-        %td
-          =show.ages
-          %br
-          $5
+          = h number_to_currency show.price

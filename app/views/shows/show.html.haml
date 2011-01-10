@@ -1,8 +1,16 @@
 - title "#{h @show.name}", true
+%h2= h @show.venue.name
+%p
+  = h @show.venue.address.city
+  ,
+  = h @show.venue.address.state
+  
+%h3
+  =@show.datetime.strftime("%m/%d/%y")
+  =@show.datetime.strftime("%I:%M %p")
 
-%p= h @show.venue
+%p= h number_to_currency @show.price
 %p= h @show.ages
 %p= h @show.note
-%p= h @show.datetime
 
 = link_to 'Edit', edit_show_path(@show), :class => 'edit'

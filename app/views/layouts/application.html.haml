@@ -17,9 +17,9 @@
       = render :partial => 'layouts/navigation'
 
       - if flash[:notice]
-        .notice= flash[:notice]
+        .section.notice= flash[:notice]
       - if flash[:error]
-        .error= flash[:error]
+        .section.error= flash[:error]
 
       = yield
       
