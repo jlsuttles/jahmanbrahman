@@ -1,13 +1,11 @@
 = form.label :title
-= form.text_field :title, :placeholder => "Title"
+= form.text_field :title
 
 = form.label :description
-= form.text_area :description, :placeholder => "Description"
+= form.text_area :description
 
-#links_form
-  - form.fields_for :links, :child_index => "" do |link|
-    .link_form{:style => "display:none"}
-      = render :partial => 'links/form', :object => link
+- form.fields_for :links do |f|
+  = render :partial => 'links/form', :object => f
 
-= link_to_function "Add Link", "$('#links_form').append($('.link_form:first-child').clone().show());"
+= link_to_add_fields("Add Link", form, :links)
 

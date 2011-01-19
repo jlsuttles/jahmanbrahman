@@ -1,6 +1,6 @@
 - title 'Create a News Story', true
 
-- form_for(@news_story) do |f|
+- form_for @news_story do |f|
   = f.error_messages
   = render :partial => 'form', :object => f
   = f.submit 'Create', :class => 'submit'

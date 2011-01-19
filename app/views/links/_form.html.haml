@@ -1,8 +1,11 @@
-= form.label :title
-= form.text_field :title, :placeholder => "Link Title"
+.fields
+  = form.label :title
+  = form.text_field :title
 
-= form.label :url
-= form.text_field :url, :placeholder => "Link URL"
+  = form.label :url
+  = form.text_field :url
 
-= form.label :description
-= form.text_field :description, :placeholder => "Link Description"
+  = form.label :description
+  = form.text_field :description
+
+  = link_to_remove_fields("remove", form)

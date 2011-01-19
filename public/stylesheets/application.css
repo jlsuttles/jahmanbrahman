@@ -17,8 +17,8 @@ body, p, ol, ul, td {
 }
 
 a { font-family: "Arial Rounded MT Bold"; }
-a { color: #666; }
-a:visited { color: #666; }
+a { color: #fff; }
+a:visited { color: #fff; }
 a:hover { color: #fff; }
 a img { border: 0; }
 
@@ -29,10 +29,11 @@ a.new, a.edit, a.delete, a.cancel {
 }
 
 h1, h2, h3 {
-	color: #333;
+	color: #039;
   font-family: "Arial Rounded MT Bold";
 	font-variant: small-caps;
 	text-transform: lowercase;
+  text-shadow: 0px 0px 10px #444;
 }
 
 h1 {
