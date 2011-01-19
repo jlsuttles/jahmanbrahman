@@ -18,7 +18,9 @@ GEM
       mime-types
       xml-simple
     builder (3.0.0)
+    columnize (0.3.2)
     haml (3.0.23)
+    linecache (0.43)
     mime-types (1.16)
     mysql (2.8.1)
     paperclip (2.3.6)
@@ -33,6 +35,11 @@ GEM
       activesupport (= 2.3.8)
       rake (>= 0.8.3)
     rake (0.8.7)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
     xml-simple (1.0.12)
 
 PLATFORMS
@@ -45,3 +52,4 @@ DEPENDENCIES
   mysql
   paperclip (~> 2.3.5)
   rails (~> 2.3.5)
+  ruby-debug
