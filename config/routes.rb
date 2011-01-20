@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.about_us  "about_us", :controller => "abouts",                :action => "index"
   map.music     "music",    :controller => "songs",                 :action => "index"
+  map.flyers    "flyers",   :controller => "flyers",                :action => "index"
   
   map.resources :abouts
   map.resources :band_photos  

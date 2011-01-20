@@ -2,14 +2,41 @@
 - title 'Music', false
 
 #main_content
-  .section.left_two_thirds
-    %h2 
-      %i Newfields 
-      Album Available in iTunes Store
-    = image_tag '/images/newfields_album_cover.jpg', :width => '640px'
   
-  .section.right_one_third
-    = render :partial => '/layouts/jplayer_newfields'
+  .section.two_thirds.float_left
+
+    .section
+      %h1 
+        Newfields Album
+        %a{:href => "http://itunes.apple.com/us/album/newfields/id401938486?uo=4", :target => "itunes_store"}
+          %img{:alt => "NewFields - Jahman Brahman", :src => "http://ax.phobos.apple.com.edgesuite.net/images/web/linkmaker/badge_itunes-lrg.gif", :style => "float: right; margin: 10px 0 0 0;border: 0;"}
+      .one_third.float_left
+        %p=image_tag "/images/newfields_album_cover.jpg", :class => :newfields
+      .one_third.float_right
+        %p Released October 31, 2010, "Newfields" is Jahman Brahman's debut album. It features epic guitar, emotive keys, funky bass and drums, all tied together with creative lyrics.
+      .clear
+    
+    .section
+      %h1 Free Downloads on Archive.org
+      .one_third.float_left
+        %p The Internet Archive, a non-profit, is building a digital library of cultural artifacts in digital form. Like a paper library, they provide free access to the general public.
+      .one_third.float_right.text_center
+        %p=link_to "Visit the Archive", "http://www.archive.org/details/JahmanBrahman"
+        =image_tag "/images/archiveorg.jpg", :style => "height: 50px"
+      .clear
+
+    %h1 Watch Jahman Brahman in Action
+    .section
+      %iframe.youtube-player{:allowFullScreen => "", :frameborder => "0", :height => "390", :src => "http://www.youtube.com/embed/D8UkspCSciQ", :title => "YouTube video player", :type => "text/html", :width => "640"}  
+
+    .section
+      %iframe.youtube-player{:allowFullScreen => "", :frameborder => "0", :height => "390", :src => "http://www.youtube.com/embed/q-TsL2lT2K4", :title => "YouTube video player", :type => "text/html", :width => "640"}
+    
+    .section
+      %iframe.youtube-player{:allowFullScreen => "", :frameborder => "0", :height => "510", :src => "http://www.youtube.com/embed/DEepojoEzGs", :title => "YouTube video player", :type => "text/html", :width => "640"}
+
+  .section.one_third.float_right.text_right
+    = render :partial => 'layouts/tour_dates'
 
   .clear
 

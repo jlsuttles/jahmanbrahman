@@ -8,7 +8,13 @@ User.create({
 
 About.create([
   { :title => "Jahman Brahman",
-    :description => "Jahman Brahman is a five-member collaboration originating from Columbus, Ohio in 2003, and currently residing in the mountains of Asheville, NC. The musical intuition of each member overcomes the restrictions of any particular genre as they pioneer the musical trail with a sound completely their own. The name Jahman Brahman emerged from each member’s goal to achieve the ultimate state of musical cohesion; each instrument connected to one another to create a piece of music from the heart of one. They’ve described their particular style as shred ‘n’ flow, a dynamic sound with a wide breath of influence, but a focus on rich, fluid, progressions of energy. Providing the low end, Nate “Brother” Brown brings his own style of funked out and super fresh bass grooves. Layered on top are Josh Loffer’s transcendent key strokes and myriad of effects, which highlight Justin Brown’s full and conscious lyrics. Drummer Rowdy Keelor gives the sound its steady concrete pulse providing the heartbeat for Casey Chanatry's riveting guitar-work. Combined, Jahman Brahman leaves the listener with a message on life, love, and the wonders experienced being part of an extraordinary musical family. Each member holds a unique passion toward many different audio paths, with influences ranging from classic rock to electronica; from punk to jazz. Instead of conforming, they ascend music through the coalescence of their diverse styles, taking risks that unfold into powerful jams and creative compositions."
+    :description => "<p>
+Jahman Brahman is a five-member collaboration originating from Columbus, Ohio in 2003. They currently reside in the mountains of Asheville, NC. The name Jahman Brahman emerged from the band’s goal to achieve ultimate musical cohesion: each instrument a facet of a single greater goal to deliver music from the heart. The band strives to leave the listener with thoughts of love, life, and the wonders experienced while being part of an extraordinary musical family. 
+</p><p>
+Shred ‘N’ Flow is how Jahman Brhman describes their unique style, meaning dynamic sound with a wide breadth of influence, but a focus on rich and fluid progressions of energy. Each member's musical intuition and influences are unique. From Classic Rock to Electronica to Punk to Jazz, elements from many genres are found in the band's music. As a result the band pioneers new sounds as the coalescence of their diverse styles unfolds into powerful jams and creative compositions.
+</p><p>
+Providing the low end, Nate “Brother” Brown brings his own style of funked-out and super-fresh bass grooves. Layered on top are Josh Loffer’s inimitable key strokes and myriad of effects, which highlight Justin Brown’s full and conscious lyrics. Drummer Rowdy Keelor provides a steady concrete pulse, the heartbeat for Casey Chanatry's riveting guitar-work. 
+</p>"
   },
 ])
 

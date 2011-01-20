@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   def load_common_data
     @contact_informations = ContactInformation.all
+    @future_shows = Show.future.all
   end
 
 private

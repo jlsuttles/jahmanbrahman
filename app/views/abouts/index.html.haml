@@ -6,20 +6,34 @@
   - if current_user.try :admin?
     = link_to 'New', new_about_path, :class => :new, :rel => :shadowbox
 
-  - @abouts.each_with_index do |about, index|
-
-    .section.three_thirds
-      %ul{ :id => "about_carousel_#{index}", :class => "jcarousel-skin-classy" }
-        - 10.times do
-          %li= link_to image_tag('/images/band01.jpg'), '/images/band01.jpg', :rel => "shadowbox[about_#{index}]", :class => "band_thumb", :title => :Title
+  .section.two_thirds.float_left
     
-    .section.two_thirds.float_left
-      %p= about.description
-      - if current_user.try :admin?
-        = link_to 'Edit', edit_about_path(about), :class => :edit, :rel => :shadowbox
-        = link_to 'Delete', about, :class => :delete, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete
+    .section
+      %ul{ :id => "about_carousel_1", :class => "jcarousel-skin-classy" }
+        %li= link_to image_tag('/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_01.jpg'), '/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_01.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_04.jpg'), '/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_04.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_02.jpg'), '/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_02.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_05.jpg'), '/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_05.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_03.jpg'), '/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_03.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_06.jpg'), '/images/about_photos/2010_10_23_BRIAN_HOCKENSMITH_06.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+      .clear
 
-    .section.one_third.float_right.text_right
-      %h2 Links
+    - @abouts.each_with_index do |about, index|
+      .section
+        %p= about.description
+        - if current_user.try :admin?
+          = link_to 'Edit', edit_about_path(about), :class => :edit, :rel => :shadowbox
+          = link_to 'Delete', about, :class => :delete, :confirm => "Are you sure you want to delete #{about.title}?", :method => :delete
 
-    .clear
+    .section
+      %ul.about_photos
+        %li= link_to image_tag('/images/about_photos/FRONT_TREES_01.jpg'), '/images/about_photos/FRONT_TREES_01.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/IN_TREE_01.jpg'), '/images/about_photos/IN_TREE_01.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/IN_TREE_03.jpg'), '/images/about_photos/IN_TREE_03.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+        %li= link_to image_tag('/images/about_photos/IN_TREE_02.jpg'), '/images/about_photos/IN_TREE_02.jpg', :rel => "shadowbox[about_1]", :class => "band_thumb"
+      .clear
+
+  .section.one_third.float_right.text_right
+    = render :partial => 'layouts/tour_dates'
+
+  .clear
