@@ -216,6 +216,10 @@ ul#navigation .fb_like_no_faces iframe {
   margin: 0 20px 0 0;
 }
 
+.abouts #main_content ul.about_photos li img {
+  height: 100px;
+}
+
 .flyers #main_content ul.flyers li a.flyer img{
   width: 80px;
 }
