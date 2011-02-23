@@ -2,7 +2,7 @@
 
 body { 
   background-color: #111;
-  color: #fff;
+  color: #aaa;
   width: 100%;
 }
 
@@ -16,7 +16,7 @@ body, p, ol, ul, td {
   line-height: 1.5em;
 }
 
-a { font-family: "Arial Rounded MT Bold"; }
+a { font-family: "Arial Rounded MT Bold", Helvetica, Arial, Verdana, sans-serif; }
 a { color: #fff; }
 a:visited { color: #fff; }
 a:hover { color: #fff; }
@@ -30,19 +30,19 @@ a.new, a.edit, a.delete, a.cancel {
 
 h1, h2, h3 {
 	color: #069;
-  font-family: "Arial Rounded MT Bold";
+  font-family: "Arial Rounded MT Bold", Helvetica, Arial, Verdana, sans-serif;
 	font-variant: small-caps;
 	text-transform: lowercase;
 }
 
 h1 {
-	font-size: 30pt;
-	line-height: 35pt;
+	font-size: 25pt;
+	line-height: 30pt;
 }
 
 h2 {
 	font-size: 25pt;
-	line-height: 30pt;
+	line-height: 25pt;
 }
 
 h3 {
