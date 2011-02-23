@@ -10,6 +10,7 @@
     = stylesheet_link_tag     'application', 'shadowbox'
 
     = yield(:head)
+    = render :partial => 'layouts/google_analytics'
   %body{:class => body_classes}
 
     #container
