@@ -1,5 +1,9 @@
 .section.tour_dates
   %h2.text_left Tour Dates
+
+  - if current_user.try :admin?
+    = link_to :new, new_show_path, :class => :new, :rel => :shadowbox
+
   %table
     - @future_shows.each_with_index do |show, index|
       %tr{:class => "#{ index.odd? ? :grey : nil }"}
@@ -8,12 +12,16 @@
           %br
           =show.datetime.strftime("%I:%M %p")
         %td
-          = h show.venue.name
+          = h show.venue_name
           %br
-          = h show.venue.address.city
+          = h show.city
           ,
-          = h show.venue.address.state
+          = h show.state
         %td
           = h show.ages
           %br
-          = h number_to_currency show.price
+          = h number_to_currency(show.price) if show.price
+      - if current_user.try :admin?
+        %tr
+          %td= link_to 'Edit', edit_show_path(show), :class => :edit, :rel => :shadowbox
+          %td= link_to 'Delete', show, :class => :delete, :confirm => "Are you sure you want to delete #{show.name}?", :method => :delete

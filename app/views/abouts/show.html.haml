@@ -3,3 +3,4 @@
 %p= @about.description
 
 = link_to :edit, edit_about_path(@about), :class => :edit
+= link_to :cancel, nil, :class => :cancel, :onclick => "parent.Shadowbox.close();"
