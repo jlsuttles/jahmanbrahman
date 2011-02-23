@@ -1,9 +1,9 @@
 body {
   left: 50%;
-  margin-left: -240px;
+  margin-left: -310px;
   position: relative;
-  width: 480px;
-  text-align: center;
+  width: 620px;
+  text-align: left;
 }
 
 h1 {
@@ -26,16 +26,45 @@ input {
   margin: 5px 0;
 }
 
-label {
+label, a {
   font-variant: small-caps;
   text-transform: lowercase;
 }
 
+a {
+  color: red;
+}
+
+input,
 textarea,
 input.text_field {
   background: #111;
   border: 1px solid #222;
   color: #aaa;
   padding: 5px;
-  width: 300px;
+  width: 600px;
+}
+
+.fields {
+  position: relative;
+}
+
+.fields .field {
+  float: left;
+  width: 310px;
+}
+
+.fields .field input {
+  width: 290px;
+}
+
+.fields .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.submit_or_cancel {
+  width: 100%;
+  text-align: right;
 }

@@ -2,7 +2,10 @@
 
 - form_for(@news_story) do |f|
   = f.error_messages
+  
   = render :partial => 'form', :object => f
-  = f.submit 'Save Changes', :class => 'submit'
-  %a{:href => '', :class => 'cancel', :onclick => "parent.Shadowbox.close();"}
-    = "Cancel"
+
+  .submit_or_cancel
+    = f.submit :save, :class => :submit
+    %br
+    = link_to :cancel, nil, :class => :cancel, :onclick => "parent.Shadowbox.close();"

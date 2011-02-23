@@ -1,5 +1,5 @@
 - title "#{h @about.title}", true
 
-%p=h @about.description
+%p= @about.description
 
-= link_to 'Edit', edit_about_path(@about), :class => 'edit'
+= link_to :edit, edit_about_path(@about), :class => :edit

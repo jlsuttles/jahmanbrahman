@@ -1,11 +1,11 @@
 .fields
-  = form.label :title
-  = form.text_field :title
+  .field
+    = form.label :link_title
+    = form.text_field :title
+  
+  .field
+    = form.label :link_url
+    = form.text_field :url
 
-  = form.label :url
-  = form.text_field :url
-
-  = form.label :description
-  = form.text_field :description
-
-  = link_to_remove_fields("remove", form)
+  .remove
+    = link_to_remove_fields("X", form)

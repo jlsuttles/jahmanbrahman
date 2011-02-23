@@ -1,11 +1,13 @@
-= form.label :title
+= form.label :story_title
 = form.text_field :title
 
-= form.label :description
+= form.label :story_description
 = form.text_area :description
 
 - form.fields_for :links do |f|
   = render :partial => 'links/form', :object => f
 
-= link_to_add_fields("Add Link", form, :links)
+.add
+  = link_to_add_fields("Add Link", form, :links)
 
+.clear
