@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :band_photos  
   map.resources :contact_informations
   map.resources :links
+  map.resources :mailing_list_members
   map.resources :news_stories  
   map.resources :shows
   map.resources :songs

@@ -1,0 +1,13 @@
+.section.mailing_list.text_right
+  %h2.text_left Mailing List
+
+  - if current_user.try :admin?
+    = link_to "View Mailing List", mailing_list_members_path, :class => :edit, :rel => :shadowbox
+
+  - form_for(:mailing_list_member, :url => { :controller => :mailing_list_members, :action => :create }) do |f|
+    = f.error_messages
+
+    = f.text_field :email, :placeholder => "your@email.com", :class => :email
+        
+    .submit_or_cancel
+      = f.submit :join, :class => :submit

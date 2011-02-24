@@ -1,0 +1,9 @@
+- @active_tab = :mailing_list_members
+- title "Mailing List Members", false
+
+#main_content
+
+  - @mailing_list_members.each do |member|
+    %p= member.email + ','
+	
+  .clear

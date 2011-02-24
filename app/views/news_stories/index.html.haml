@@ -10,6 +10,4 @@
     %p= news_story.description
     - if current_user.try :admin?
       = link_to 'Edit', edit_news_story_path(news_story), :class => 'edit'
-      = link_to 'Delete', news_story, :class => 'delete',
-        :confirm => "Are you sure you want to delete #{news_story.title}?", 
-        :method => :delete
+      = link_to 'Delete', news_story, :class => 'delete', :confirm => "Are you sure you want to delete #{news_story.title}?", :method => :delete

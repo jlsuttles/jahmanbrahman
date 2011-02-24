@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110223193732) do
+ActiveRecord::Schema.define(:version => 20110224003203) do
 
   create_table "about_links", :force => true do |t|
     t.integer  "about_id"
@@ -69,6 +69,13 @@ ActiveRecord::Schema.define(:version => 20110223193732) do
     t.datetime "updated_at"
   end
 
+  create_table "blog_posts", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contact_informations", :force => true do |t|
     t.string   "title"
     t.text     "description"
@@ -80,6 +87,12 @@ ActiveRecord::Schema.define(:version => 20110223193732) do
     t.string   "title"
     t.text     "description"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mailing_list_members", :force => true do |t|
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -110,6 +123,14 @@ ActiveRecord::Schema.define(:version => 20110223193732) do
     t.string   "file_content_type"
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "press_stories", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
