@@ -26,7 +26,8 @@
           = link_to 'Delete', news_story, :class => :delete, :confirm => "Are you sure you want to delete #{news_story.title}?", :method => :delete
 
   .section.one_third.float_right.text_right
-    = render :partial => 'mailing_list_members/new'
+    .section
+      = image_tag 'DSO-Jubilee-279x350.gif', :width => '275'
     = render :partial => 'layouts/tour_dates'
   
   .clear
