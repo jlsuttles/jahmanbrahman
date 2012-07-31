@@ -1,27 +1,5 @@
 .section.tour_dates
   %h2.text_left Tour Dates
 
-  - if current_user.try :admin?
-    = link_to :new, new_show_path, :class => :new, :rel => :shadowbox
-
-  %table
-    - @future_shows.each_with_index do |show, index|
-      %tr{:class => "#{ index.odd? ? :grey : nil }"}
-        %td.datetime
-          =show.datetime.strftime("%m/%d/%y")
-          %br
-          =show.datetime.strftime("%I:%M %p")
-        %td
-          = h show.venue_name
-          %br
-          = h show.city
-          ,
-          = h show.state
-        %td
-          = h show.ages
-          %br
-          = h number_to_currency(show.price) if show.price
-      - if current_user.try :admin?
-        %tr
-          %td= link_to 'Edit', edit_show_path(show), :class => :edit, :rel => :shadowbox
-          %td= link_to 'Delete', show, :class => :delete, :confirm => "Are you sure you want to delete #{show.name}?", :method => :delete
+  %a.songkick-widget{"data-theme" => "dark", :href => "http://www.songkick.com/artists/970420"} Jahman Brahman
+  %script{:src => "http://widget.songkick.com/widget.js"}
