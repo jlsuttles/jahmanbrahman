@@ -26,8 +26,6 @@
           = link_to 'Delete', news_story, :class => :delete, :confirm => "Are you sure you want to delete #{news_story.title}?", :method => :delete
 
   .section.one_third.float_right.text_right
-    .section
-      = link_to image_tag('floyd-yoga-jam.jpg', :width => '275'), 'http://floydyogajam.com/', :target => :_blank
     = render :partial => 'layouts/tour_dates'
   
   .clear
