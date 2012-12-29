@@ -58,17 +58,17 @@
 }
 
 #band .nate img {
-  top: 175px;
+  top: 115px;
   left: 50%;
-  margin-left: -30px;
-  width: 110px;
+  margin-left: -178px;
+  width: 90px;
   z-index: 999;
 }
 
 #band .casey img {
-  top: 150px;
+  top: 185px;
   left: 50%;
-  margin-left: -125px;
+  margin-left: -105px;
   width: 90px;
   z-index: 999;
 }
@@ -76,16 +76,24 @@
 #band .rowdy img {
   top: 65px;
   left: 50%;
-  margin-left: -80px;
+  margin-left: -100px;
   width: 190px;
   z-index: 999;
 }
 
 #band .justin img {
-  top: 150px;
+  top: 190px;
   left: 50%;
-  margin-left: 70px;
+  margin-left: -10px;
   width: 100px;
+  z-index: 999;
+}
+
+#band .josh img {
+  top: 112px;
+  left: 50%;
+  margin-left: 90px;
+  width: 130px;
   z-index: 999;
 }
 
